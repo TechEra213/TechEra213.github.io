@@ -6,1605 +6,1135 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TechEra - Learn Here, Lead Anywhere</title>
-<meta name="description" content="TechEra Knowledge and Careers Pvt. Ltd. - India's premier online learning platform offering paid workshops in programming, marketing, creative & visual arts, plus worldwide assignment and project help.">
+<title>TechEra – Learn Here, Lead Anywhere | Workshops & Assignment Help</title>
+<meta name="description" content="TechEra Knowledge and Careers Pvt. Ltd. – India's trusted platform for paid online workshops in Programming, Digital Marketing, Creative & Visual Arts, plus worldwide assignment and project help.">
+<meta name="keywords" content="TechEra, online workshops, assignment help, programming course, digital marketing, graphic design, MBA assignment, college project help India">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-/* ============================================================
-   TECHERA GLOBAL DESIGN SYSTEM
-   TechEra Knowledge and Careers Pvt. Ltd.
-   Domain: techera.org.in
-   ============================================================ */
-:root {
-  --green:        #22c47a;
-  --green-dark:   #179958;
-  --green-light:  #e8f8f0;
-  --navy:         #0c1f3f;
-  --navy-mid:     #162d55;
-  --navy-light:   #1e3a6e;
-  --gold:         #f0a500;
-  --red:          #e03535;
-  --white:        #ffffff;
-  --off-white:    #f7f9fc;
-  --gray-line:    #e5eaf1;
-  --gray-text:    #6b7a96;
-  --text:         #0c1f3f;
-  --radius-sm:    8px;
-  --radius:       14px;
-  --radius-lg:    20px;
-  --shadow-sm:    0 2px 10px rgba(12,31,63,0.07);
-  --shadow:       0 6px 28px rgba(12,31,63,0.10);
-  --shadow-lg:    0 16px 48px rgba(12,31,63,0.14);
-  --transition:   all 0.24s cubic-bezier(0.4,0,0.2,1);
+/* =====================================================
+   RESET & BASE
+   ===================================================== */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:#111827;background:#fff;overflow-x:hidden;line-height:1.6}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;border:none;background:none}
+h1,h2,h3,h4,h5{font-family:'Outfit',sans-serif;line-height:1.15}
+input,textarea,select{font-family:'Plus Jakarta Sans',sans-serif}
+
+/* =====================================================
+   DESIGN TOKENS
+   ===================================================== */
+:root{
+  --g:#1db96e; --gd:#158a50; --gl:#e6f9ef;
+  --n:#0b1f42; --n2:#142d5e; --n3:#1e3a78;
+  --gold:#f59e0b; --red:#ef4444;
+  --bg:#f4f7fb; --bd:#e2e8f0; --mt:#64748b;
+  --r:12px; --r2:20px;
+  --sh:0 4px 24px rgba(11,31,66,.08);
+  --sh2:0 14px 50px rgba(11,31,66,.14);
+  --tr:all .22s cubic-bezier(.4,0,.2,1);
 }
 
-/* RESET & BASE */
-*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'DM Sans', sans-serif;
-  color: var(--text);
-  background: var(--white);
-  overflow-x: hidden;
-  line-height: 1.6;
-}
-img { max-width: 100%; display: block; }
-a { text-decoration: none; color: inherit; }
-button { cursor: pointer; font-family: 'DM Sans', sans-serif; border: none; }
-h1, h2, h3, h4, h5 { font-family: 'Syne', sans-serif; line-height: 1.15; }
-input, textarea, select { font-family: 'DM Sans', sans-serif; }
+/* =====================================================
+   UTILITIES
+   ===================================================== */
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.sec{padding:88px 0}.sec-sm{padding:64px 0}
+.lbl{font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--g);display:inline-block;margin-bottom:12px}
+.h2{font-size:clamp(26px,3.8vw,42px);font-weight:800;color:var(--n);margin-bottom:14px}
+.sub{font-size:17px;color:var(--mt);line-height:1.78;max-width:580px}
+.tc{text-align:center}.tc .sub{margin:0 auto}
 
-/* UTILITY */
-.container { max-width: 1140px; margin: 0 auto; padding: 0 2rem; }
-.section-pad { padding: 90px 0; }
-.section-label {
-  display: inline-block;
-  font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase;
-  color: var(--green); margin-bottom: 14px;
-}
-.section-title { font-size: clamp(28px,4vw,40px); font-weight: 800; color: var(--navy); margin-bottom: 14px; }
-.section-sub { font-size: 17px; color: var(--gray-text); max-width: 560px; line-height: 1.75; }
-.text-center { text-align: center; }
-.text-center .section-sub { margin: 0 auto; }
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+.btn{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:700;padding:13px 26px;border-radius:var(--r);transition:var(--tr);border:2px solid transparent;white-space:nowrap;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif}
+.btn-g{background:var(--g);color:#fff}.btn-g:hover{background:var(--gd);transform:translateY(-2px);box-shadow:0 8px 24px rgba(29,185,110,.35)}
+.btn-n{background:var(--n);color:#fff}.btn-n:hover{background:var(--n2);transform:translateY(-1px)}
+.btn-ow{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}.btn-ow:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.btn-og{background:transparent;color:var(--g);border-color:var(--g)}.btn-og:hover{background:var(--g);color:#fff}
+.btn-wa{background:#25d366;color:#fff}.btn-wa:hover{background:#1ea354;transform:translateY(-1px)}
+.btn-sm{padding:9px 18px;font-size:13px}.btn-lg{padding:16px 36px;font-size:17px}
 
-.btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 15px; font-weight: 600; padding: 13px 26px; border-radius: var(--radius-sm);
-  transition: var(--transition); border: 2px solid transparent; white-space: nowrap;
-}
-.btn-primary { background: var(--green); color: white; }
-.btn-primary:hover { background: var(--green-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(34,196,122,0.35); }
-.btn-outline-white { background: transparent; color: white; border-color: rgba(255,255,255,0.45); }
-.btn-outline-white:hover { background: rgba(255,255,255,0.1); border-color: white; }
-.btn-outline-green { background: transparent; color: var(--green); border-color: var(--green); }
-.btn-outline-green:hover { background: var(--green); color: white; }
-.btn-navy { background: var(--navy); color: white; }
-.btn-navy:hover { background: var(--navy-mid); transform: translateY(-1px); }
-.btn-sm { padding: 9px 18px; font-size: 13px; }
+/* =====================================================
+   TAGS / BADGES
+   ===================================================== */
+.tag{display:inline-flex;align-items:center;font-size:11px;font-weight:700;padding:4px 10px;border-radius:50px}
+.tg{background:var(--gl);color:var(--gd)}
+.tn{background:var(--n);color:#fff}
+.tr{background:#fff0f0;color:#c0392b}
+.tb{background:#eff6ff;color:#1e40af}
+.to{background:#fffbeb;color:#92400e}
 
-.badge {
-  display: inline-flex; align-items: center;
-  font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 50px;
-}
-.badge-green { background: var(--green-light); color: var(--green-dark); }
-.badge-navy { background: var(--navy); color: white; }
-.badge-red { background: #ffeaea; color: var(--red); }
-.badge-gold { background: #fff4d6; color: #a06800; }
-.badge-blue { background: #e6f0ff; color: #1a55a0; }
+/* =====================================================
+   PAGE SYSTEM
+   ===================================================== */
+.page{display:none}
+.page.active{display:block;animation:fadeUp .3s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 
-/* PAGE SYSTEM */
-.page { display: none; }
-.page.active { display: block; animation: pageIn 0.35s ease; }
-@keyframes pageIn { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+/* =====================================================
+   TOP ANNOUNCEMENT BAR
+   ===================================================== */
+.topbar{background:var(--n);padding:9px 0;overflow:hidden}
+.tb-inner{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,.75)}
+.tb-inner strong{color:var(--g)}
+.tb-dot{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.3);flex-shrink:0}
 
-/* ============================================================
+/* =====================================================
    NAVBAR
-   ============================================================ */
-.navbar {
-  position: sticky; top: 0; z-index: 1000;
-  background: var(--navy);
-  height: 70px;
-  display: flex; align-items: center;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.25);
-}
-.navbar .container {
-  display: flex; align-items: center; justify-content: space-between; width: 100%;
-}
-.nav-brand {
-  display: flex; align-items: center; gap: 12px;
-  cursor: pointer; user-select: none;
-}
-.nav-logo-box {
-  width: 42px; height: 42px; border-radius: var(--radius-sm);
-  background: var(--green);
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 17px; color: white;
-  flex-shrink: 0;
-}
-.nav-brand-text { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 21px; color: white; }
-.nav-brand-text em { color: var(--green); font-style: normal; }
-.nav-tagline { font-size: 10px; font-weight: 500; color: rgba(255,255,255,0.45); letter-spacing: 1px; margin-top: 1px; }
+   ===================================================== */
+.navbar{background:#fff;position:sticky;top:0;z-index:1000;border-bottom:1px solid var(--bd);box-shadow:0 2px 16px rgba(11,31,66,.06)}
+.navbar .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:12px;cursor:pointer;user-select:none}
+.brand-ico{width:44px;height:44px;border-radius:10px;background:var(--g);display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-weight:900;font-size:17px;color:#fff;flex-shrink:0}
+.brand-txt{font-family:'Outfit',sans-serif;font-weight:800;font-size:22px;color:var(--n);line-height:1}
+.brand-txt span{color:var(--g)}
+.brand-tag{font-size:10px;font-weight:500;color:var(--mt);letter-spacing:.5px;margin-top:2px}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nl{font-size:14px;font-weight:600;color:var(--mt);padding:8px 13px;border-radius:8px;transition:var(--tr);position:relative}
+.nl:hover,.nl.on{color:var(--n)}
+.nl.on::after{content:'';position:absolute;bottom:5px;left:50%;transform:translateX(-50%);width:18px;height:2.5px;background:var(--g);border-radius:2px}
+.nav-right{display:flex;align-items:center;gap:10px}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:8px;border-radius:8px;cursor:pointer}
+.hamburger span{display:block;width:24px;height:2.5px;background:var(--n);border-radius:2px;transition:var(--tr)}
+.hamburger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+.mob-menu{display:none;position:fixed;inset:0;top:68px;background:#fff;z-index:999;padding:20px;overflow-y:auto;border-top:1px solid var(--bd)}
+.mob-menu.open{display:block;animation:slideD .25s ease}
+@keyframes slideD{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.mm-link{display:block;font-size:16px;font-weight:600;color:var(--n);padding:14px 0;border-bottom:1px solid var(--bd);cursor:pointer}
+.mm-btns{margin-top:20px;display:flex;flex-direction:column;gap:10px}
 
-.nav-links { display: flex; align-items: center; gap: 2px; }
-.nav-link {
-  background: none; color: rgba(255,255,255,0.72);
-  font-size: 14px; font-weight: 500; padding: 8px 14px; border-radius: 8px;
-  transition: var(--transition); position: relative;
-}
-.nav-link:hover { color: white; background: rgba(255,255,255,0.09); }
-.nav-link.active { color: var(--green); }
-.nav-link.active::after {
-  content: ''; position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%);
-  width: 18px; height: 2px; background: var(--green); border-radius: 2px;
-}
-.nav-cta-wrap { display: flex; align-items: center; gap: 10px; }
-.nav-cta {
-  background: var(--green); color: white;
-  font-size: 14px; font-weight: 700; padding: 10px 22px; border-radius: 8px;
-  transition: var(--transition);
-}
-.nav-cta:hover { background: var(--green-dark); transform: translateY(-1px); box-shadow: 0 6px 16px rgba(34,196,122,0.3); }
-.nav-whatsapp {
-  background: rgba(255,255,255,0.1); color: white;
-  font-size: 14px; font-weight: 600; padding: 10px 16px; border-radius: 8px;
-  transition: var(--transition); display: flex; align-items: center; gap: 6px;
-}
-.nav-whatsapp:hover { background: rgba(255,255,255,0.18); }
+/* =====================================================
+   HERO
+   ===================================================== */
+.hero{background:linear-gradient(135deg,var(--n) 0%,var(--n2) 55%,#0a3520 100%);padding:90px 0 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-100px;right:-80px;width:580px;height:580px;border-radius:50%;background:radial-gradient(circle,rgba(29,185,110,.13) 0%,transparent 65%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(29,185,110,.15);border:1px solid rgba(29,185,110,.35);color:#4de0a0;font-size:13px;font-weight:600;padding:8px 18px;border-radius:50px;margin-bottom:24px}
+.hero-pill::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--g);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.65)}}
+.hero h1{font-size:clamp(34px,4.2vw,58px);font-weight:900;color:#fff;margin-bottom:20px;letter-spacing:-.5px}
+.hero h1 em{color:var(--g);font-style:normal}
+.hero-p{font-size:18px;color:rgba(255,255,255,.68);line-height:1.78;margin-bottom:32px;max-width:500px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
+.hero-stats{display:flex;gap:36px;flex-wrap:wrap}
+.hs strong{display:block;font-family:'Outfit',sans-serif;font-size:30px;font-weight:900;color:#fff}
+.hs span{font-size:13px;color:rgba(255,255,255,.5)}
 
-/* ============================================================
-   HOME — HERO
-   ============================================================ */
-.hero {
-  background: var(--navy);
-  background-image:
-    radial-gradient(ellipse 70% 60% at 80% 50%, rgba(34,196,122,0.12) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 80% at 10% 100%, rgba(22,45,85,0.8) 0%, transparent 70%);
-  padding: 100px 0 80px;
-  overflow: hidden; position: relative;
-}
-.hero::after {
-  content: '';
-  position: absolute; inset: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  pointer-events: none;
-}
-.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; position: relative; z-index: 1; }
-.hero-eyebrow {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(34,196,122,0.15); border: 1px solid rgba(34,196,122,0.3);
-  color: #4de0a0; font-size: 13px; font-weight: 600; padding: 7px 16px; border-radius: 50px;
-  margin-bottom: 24px;
-}
-.hero-eyebrow::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
-@keyframes pulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.5; transform:scale(0.8); } }
-.hero h1 { font-size: clamp(36px,4.5vw,56px); font-weight: 800; color: white; margin-bottom: 20px; }
-.hero h1 .accent { color: var(--green); }
-.hero-desc { font-size: 18px; color: rgba(255,255,255,0.65); line-height: 1.75; margin-bottom: 32px; max-width: 480px; }
-.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 44px; }
-.hero-stats { display: flex; gap: 32px; flex-wrap: wrap; }
-.hero-stat-item strong { display: block; font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 800; color: white; }
-.hero-stat-item span { font-size: 13px; color: rgba(255,255,255,0.5); }
+/* Hero Dashboard Card */
+.hcard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--r2);padding:24px;backdrop-filter:blur(8px);position:relative}
+.hcard-badge{position:absolute;top:-14px;right:20px;background:var(--gold);color:var(--n);font-size:12px;font-weight:800;padding:7px 16px;border-radius:50px;box-shadow:0 4px 14px rgba(245,158,11,.4)}
+.hcard-lbl{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:14px}
+.prow{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:12px 14px;margin-bottom:10px}
+.prow-ico{width:40px;height:40px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.prow-info{flex:1;min-width:0}
+.prow-title{font-size:14px;font-weight:600;color:#fff}
+.prow-sub{font-size:12px;color:rgba(255,255,255,.42);margin-top:1px}
+.prow-bar{height:4px;background:rgba(255,255,255,.1);border-radius:4px;margin-top:6px}
+.prow-fill{height:100%;border-radius:4px;background:var(--g)}
+.prow-pct{font-size:12px;font-weight:700;color:var(--g);flex-shrink:0}
+.hc-sep{height:1px;background:rgba(255,255,255,.08);margin:14px 0}
+.live-row{display:flex;align-items:center;justify-content:space-between;font-size:13px;color:rgba(255,255,255,.7)}
+.live-dot{display:flex;align-items:center;gap:7px}
+.live-dot::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--red);animation:blink 1.2s infinite;flex-shrink:0}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.15}}
+.enroll-row{display:flex;align-items:center;gap:10px;background:rgba(29,185,110,.12);border:1px solid rgba(29,185,110,.2);border-radius:9px;padding:10px 14px;margin-top:12px}
+.e-ava{width:34px;height:34px;border-radius:50%;background:var(--g);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff;flex-shrink:0}
+.e-info{font-size:13px;color:rgba(255,255,255,.7)}
+.e-info strong{color:#fff;display:block;font-size:14px}
+.e-time{margin-left:auto;font-size:11px;color:rgba(255,255,255,.35);flex-shrink:0}
 
-/* Hero right panel */
-.hero-panel {
-  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
-  border-radius: var(--radius-lg); padding: 24px; backdrop-filter: blur(8px);
-  position: relative;
-}
-.hero-panel-badge {
-  position: absolute; top: -14px; right: 24px;
-  background: var(--gold); color: var(--navy);
-  font-size: 12px; font-weight: 800; padding: 7px 16px; border-radius: 50px;
-  box-shadow: 0 4px 14px rgba(240,165,0,0.4);
-}
-.hp-head { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.5); margin-bottom: 14px; letter-spacing: 1px; text-transform: uppercase; }
-.course-row {
-  display: flex; align-items: center; gap: 12px;
-  background: rgba(255,255,255,0.06); border-radius: 10px; padding: 12px 14px; margin-bottom: 10px;
-  border: 1px solid rgba(255,255,255,0.07);
-}
-.cr-icon { width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
-.cr-title { font-size: 14px; font-weight: 600; color: white; }
-.cr-sub { font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 2px; }
-.cr-prog { height: 4px; background: rgba(255,255,255,0.1); border-radius: 4px; margin-top: 6px; }
-.cr-prog-fill { height: 100%; border-radius: 4px; background: var(--green); }
-.hp-divider { height: 1px; background: rgba(255,255,255,0.08); margin: 16px 0; }
-.hp-live-row {
-  display: flex; align-items: center; justify-content: space-between;
-}
-.live-dot { display: flex; align-items: center; gap: 6px; font-size: 13px; color: rgba(255,255,255,0.7); }
-.live-dot::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--red); animation: blink 1.2s infinite; }
-@keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0.2; } }
-.hp-student-row {
-  display: flex; align-items: center; gap: 10px;
-  margin-top: 14px; background: rgba(34,196,122,0.1); border-radius: 8px; padding: 10px 14px;
-  border: 1px solid rgba(34,196,122,0.2);
-}
-.hp-student-row .avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--green); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; color: white; }
-.hp-student-row .info { font-size: 13px; color: rgba(255,255,255,0.7); }
-.hp-student-row .info strong { color: white; display: block; font-size: 14px; }
-.hp-student-row .time { margin-left: auto; font-size: 11px; color: rgba(255,255,255,0.35); }
-
-/* ============================================================
-   ANNOUNCEMENT BAR
-   ============================================================ */
-.announce-bar {
-  background: var(--green); padding: 12px 0; text-align: center; overflow: hidden;
-}
-.announce-inner {
-  display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap;
-  font-size: 14px; font-weight: 600; color: white;
-}
-.announce-divider { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,0.5); }
-
-/* ============================================================
+/* =====================================================
    STATS BAND
-   ============================================================ */
-.stats-band { background: var(--off-white); border-bottom: 1px solid var(--gray-line); padding: 40px 0; }
-.stats-band-inner { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; }
-.stat-block { text-align: center; padding: 10px 20px; }
-.stat-block + .stat-block { border-left: 1px solid var(--gray-line); }
-.stat-block strong { display: block; font-family: 'Syne', sans-serif; font-size: 38px; font-weight: 800; color: var(--navy); }
-.stat-block span { font-size: 14px; color: var(--gray-text); font-weight: 500; }
+   ===================================================== */
+.sband{background:var(--g)}
+.sband-inner{display:grid;grid-template-columns:repeat(4,1fr)}
+.sitem{text-align:center;padding:28px 20px;border-right:1px solid rgba(255,255,255,.2)}
+.sitem:last-child{border-right:none}
+.sitem strong{display:block;font-family:'Outfit',sans-serif;font-size:36px;font-weight:900;color:#fff}
+.sitem span{font-size:14px;color:rgba(255,255,255,.85);font-weight:500}
 
-/* ============================================================
-   TWO PURPOSE SECTION
-   ============================================================ */
-.purpose-section { background: var(--white); }
-.purpose-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 48px; }
-.purpose-card {
-  border-radius: var(--radius-lg); padding: 40px;
-  position: relative; overflow: hidden; cursor: pointer;
-  transition: var(--transition);
-}
-.purpose-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
-.purpose-card.workshops { background: var(--navy); color: white; }
-.purpose-card.assignments { background: var(--green); color: white; }
-.purpose-card::before {
-  content: ''; position: absolute; top: -60px; right: -60px;
-  width: 200px; height: 200px; border-radius: 50%;
-  background: rgba(255,255,255,0.07);
-}
-.purpose-card::after {
-  content: ''; position: absolute; bottom: -40px; left: -40px;
-  width: 140px; height: 140px; border-radius: 50%;
-  background: rgba(255,255,255,0.05);
-}
-.purpose-icon { font-size: 44px; margin-bottom: 20px; position: relative; z-index: 1; }
-.purpose-card h3 { font-size: 26px; font-weight: 800; margin-bottom: 12px; position: relative; z-index: 1; }
-.purpose-card p { font-size: 16px; line-height: 1.75; opacity: 0.85; margin-bottom: 24px; position: relative; z-index: 1; }
-.purpose-list { list-style: none; margin-bottom: 28px; position: relative; z-index: 1; }
-.purpose-list li { font-size: 15px; padding: 6px 0; display: flex; align-items: center; gap: 10px; opacity: 0.9; }
-.purpose-list li::before { content: '✓'; font-weight: 800; font-size: 13px; width: 22px; height: 22px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.purpose-cta {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(255,255,255,0.18); color: white;
-  font-weight: 700; font-size: 15px; padding: 12px 24px; border-radius: var(--radius-sm);
-  transition: var(--transition); border: 1.5px solid rgba(255,255,255,0.3);
-  position: relative; z-index: 1;
-}
-.purpose-cta:hover { background: rgba(255,255,255,0.28); }
+/* =====================================================
+   TWO PILLARS SECTION
+   ===================================================== */
+.pillars-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
+.pillar{border-radius:var(--r2);padding:42px;position:relative;overflow:hidden;cursor:pointer;transition:var(--tr)}
+.pillar:hover{transform:translateY(-6px);box-shadow:var(--sh2)}
+.pillar.p1{background:var(--n)}.pillar.p2{background:var(--g)}
+.pillar::before{content:'';position:absolute;top:-60px;right:-60px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.07)}
+.pillar::after{content:'';position:absolute;bottom:-40px;left:-40px;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,.04)}
+.pillar-ico{font-size:46px;margin-bottom:20px;position:relative;z-index:1}
+.pillar h3{font-size:26px;font-weight:800;color:#fff;margin-bottom:12px;position:relative;z-index:1}
+.pillar p{font-size:16px;color:rgba(255,255,255,.82);line-height:1.75;margin-bottom:22px;position:relative;z-index:1}
+.pillar ul{margin-bottom:28px;position:relative;z-index:1}
+.pillar ul li{font-size:15px;color:rgba(255,255,255,.9);padding:6px 0;display:flex;align-items:center;gap:10px}
+.pillar ul li::before{content:'✓';font-size:11px;font-weight:800;width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.pillar-btn{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.18);color:#fff;border:1.5px solid rgba(255,255,255,.3);font-size:15px;font-weight:700;padding:12px 22px;border-radius:var(--r);transition:var(--tr);position:relative;z-index:1;font-family:'Plus Jakarta Sans',sans-serif;cursor:pointer}
+.pillar-btn:hover{background:rgba(255,255,255,.3);border-color:rgba(255,255,255,.7)}
 
-/* ============================================================
-   WORKSHOPS CATEGORIES
-   ============================================================ */
-.wcat-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; margin-top: 48px; }
-.wcat-card {
-  background: white; border: 1.5px solid var(--gray-line); border-radius: var(--radius);
-  padding: 28px 20px; text-align: center; transition: var(--transition); cursor: pointer;
-}
-.wcat-card:hover { border-color: var(--green); transform: translateY(-4px); box-shadow: 0 10px 28px rgba(34,196,122,0.12); }
-.wcat-card:hover .wcat-icon { background: var(--green); color: white; }
-.wcat-icon {
-  width: 60px; height: 60px; border-radius: 14px;
-  background: var(--off-white); margin: 0 auto 16px;
-  display: flex; align-items: center; justify-content: center; font-size: 26px;
-  transition: var(--transition);
-}
-.wcat-card h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
-.wcat-card p { font-size: 13px; color: var(--gray-text); line-height: 1.55; }
-.wcat-count { display: inline-block; margin-top: 12px; font-size: 12px; font-weight: 700; color: var(--green); }
+/* =====================================================
+   WORKSHOP CATEGORY CARDS
+   ===================================================== */
+.cats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:48px}
+.ccat{background:#fff;border:1.5px solid var(--bd);border-radius:var(--r);padding:28px 20px;text-align:center;transition:var(--tr);cursor:pointer}
+.ccat:hover{border-color:var(--g);transform:translateY(-4px);box-shadow:0 10px 32px rgba(29,185,110,.12)}
+.ccat:hover .ccat-ico{background:var(--g);color:#fff}
+.ccat-ico{width:62px;height:62px;border-radius:14px;background:var(--bg);margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:26px;transition:var(--tr)}
+.ccat h3{font-size:15px;font-weight:700;color:var(--n);margin-bottom:6px}
+.ccat p{font-size:13px;color:var(--mt);line-height:1.55}
+.ccat-count{display:inline-block;margin-top:12px;font-size:12px;font-weight:700;color:var(--g)}
 
-/* ============================================================
-   COURSE / WORKSHOP CARDS
-   ============================================================ */
-.cards-grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
-.cards-grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 22px; }
+/* =====================================================
+   COURSE CARDS (Recorded)
+   ===================================================== */
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 
-.course-card {
-  background: white; border: 1.5px solid var(--gray-line); border-radius: var(--radius);
-  overflow: hidden; transition: var(--transition); cursor: pointer; display: flex; flex-direction: column;
-}
-.course-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: rgba(34,196,122,0.3); }
-.cc-thumb {
-  height: 168px; display: flex; align-items: center; justify-content: center;
-  font-size: 52px; position: relative;
-}
-.cc-badges { position: absolute; top: 12px; left: 12px; display: flex; gap: 6px; }
-.cc-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
-.cc-cat { font-size: 12px; font-weight: 700; color: var(--green); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; }
-.cc-body h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 10px; line-height: 1.45; }
-.cc-meta { display: flex; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--gray-text); margin-bottom: 14px; }
-.cc-rating { color: var(--gold); font-weight: 700; }
-.cc-instructor { font-size: 13px; color: var(--gray-text); margin-bottom: auto; padding-bottom: 14px; }
-.cc-footer { border-top: 1px solid var(--gray-line); padding-top: 14px; display: flex; align-items: center; justify-content: space-between; margin-top: 14px; }
-.cc-price { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; color: var(--navy); }
-.cc-price-orig { font-size: 13px; color: var(--gray-text); text-decoration: line-through; margin-left: 6px; font-weight: 400; font-family: 'DM Sans', sans-serif; }
-.cc-btn {
-  background: var(--green); color: white; font-size: 13px; font-weight: 700;
-  padding: 9px 18px; border-radius: 8px; transition: var(--transition);
-}
-.cc-btn:hover { background: var(--green-dark); }
+.ccard{background:#fff;border:1.5px solid var(--bd);border-radius:var(--r);overflow:hidden;transition:var(--tr);display:flex;flex-direction:column}
+.ccard:hover{transform:translateY(-5px);box-shadow:var(--sh2);border-color:rgba(29,185,110,.3)}
+.cthumb{height:164px;display:flex;align-items:center;justify-content:center;font-size:52px;position:relative}
+.cbadges{position:absolute;top:12px;left:12px;display:flex;gap:6px;flex-wrap:wrap}
+.cbody{padding:20px;flex:1;display:flex;flex-direction:column}
+.ccat2{font-size:11px;font-weight:700;color:var(--g);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px}
+.cbody h3{font-size:15px;font-weight:700;color:var(--n);margin-bottom:10px;line-height:1.45}
+.cmeta{display:flex;flex-wrap:wrap;gap:10px;font-size:13px;color:var(--mt);margin-bottom:auto;padding-bottom:14px}
+.star{color:var(--gold);font-weight:700}
+.cfoot{border-top:1px solid var(--bd);padding-top:14px;display:flex;align-items:center;justify-content:space-between;margin-top:14px}
+.cprice{font-family:'Outfit',sans-serif;font-size:20px;font-weight:800;color:var(--n)}
+.cpold{font-size:13px;color:var(--mt);text-decoration:line-through;margin-left:6px;font-weight:400;font-family:'Plus Jakarta Sans',sans-serif}
+.ccbtn{background:var(--g);color:#fff;font-size:13px;font-weight:700;padding:9px 18px;border-radius:8px;transition:var(--tr);cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif}
+.ccbtn:hover{background:var(--gd)}
 
-/* Workshop card special */
-.workshop-card {
-  background: white; border: 1.5px solid var(--gray-line); border-radius: var(--radius);
-  overflow: hidden; transition: var(--transition); cursor: pointer;
-}
-.workshop-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
-.wc-header { padding: 24px; border-bottom: 1px solid var(--gray-line); position: relative; }
-.wc-live-badge {
-  position: absolute; top: 20px; right: 20px;
-  background: var(--red); color: white; font-size: 11px; font-weight: 800;
-  padding: 5px 11px; border-radius: 6px;
-  display: flex; align-items: center; gap: 5px;
-}
-.wc-live-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: white; animation: blink 1.2s infinite; }
-.wc-header h3 { font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 8px; padding-right: 80px; }
-.wc-header p { font-size: 14px; color: var(--gray-text); line-height: 1.65; }
-.wc-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
-.wc-footer { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; background: var(--off-white); }
-.wc-date-info { }
-.wc-date-info strong { display: block; font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; color: var(--navy); }
-.wc-date-info span { font-size: 13px; color: var(--gray-text); }
-.wc-register-btn {
-  background: var(--navy); color: white; font-size: 14px; font-weight: 700;
-  padding: 11px 22px; border-radius: 8px; transition: var(--transition);
-}
-.wc-register-btn:hover { background: var(--green); transform: translateY(-1px); }
+/* =====================================================
+   LIVE WORKSHOP CARDS
+   ===================================================== */
+.wcard{background:#fff;border:1.5px solid var(--bd);border-radius:var(--r);overflow:hidden;transition:var(--tr)}
+.wcard:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
+.wc-head{padding:24px;border-bottom:1px solid var(--bd);position:relative}
+.wc-head h3{font-size:17px;font-weight:700;color:var(--n);margin-bottom:8px;padding-right:70px;line-height:1.4}
+.wc-head p{font-size:14px;color:var(--mt);line-height:1.65}
+.wc-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.live-badge{position:absolute;top:20px;right:20px;background:var(--red);color:#fff;font-size:11px;font-weight:800;padding:5px 11px;border-radius:6px;display:flex;align-items:center;gap:5px}
+.live-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#fff;animation:blink 1.2s infinite}
+.wc-foot{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:var(--bg);flex-wrap:wrap;gap:12px}
+.wc-date strong{display:block;font-family:'Outfit',sans-serif;font-size:15px;font-weight:700;color:var(--n)}
+.wc-date span{font-size:13px;color:var(--mt)}
+.wreg{background:var(--n);color:#fff;font-size:14px;font-weight:700;padding:11px 22px;border-radius:8px;transition:var(--tr);cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif}
+.wreg:hover{background:var(--g)}
 
-/* ============================================================
-   ASSIGNMENT SECTION
-   ============================================================ */
-.assign-card {
-  background: white; border: 1.5px solid var(--gray-line); border-radius: var(--radius);
-  padding: 28px; transition: var(--transition); cursor: pointer;
-}
-.assign-card:hover { border-color: var(--green); transform: translateY(-4px); box-shadow: var(--shadow); }
-.assign-icon-wrap { width: 54px; height: 54px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; }
-.assign-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
-.assign-card p { font-size: 14px; color: var(--gray-text); line-height: 1.65; margin-bottom: 14px; }
-.assign-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
-.assign-footer { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--gray-line); padding-top: 16px; }
-.assign-price-label { font-size: 12px; color: var(--gray-text); font-weight: 500; }
-.assign-price-val { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; color: var(--navy); }
-.submit-project-btn {
-  background: var(--navy); color: white; font-size: 13px; font-weight: 700;
-  padding: 10px 20px; border-radius: 8px; transition: var(--transition);
-}
-.submit-project-btn:hover { background: var(--green); }
+/* =====================================================
+   ASSIGNMENT CARDS
+   ===================================================== */
+.acard{background:#fff;border:1.5px solid var(--bd);border-radius:var(--r);padding:26px;transition:var(--tr)}
+.acard:hover{border-color:var(--g);transform:translateY(-4px);box-shadow:var(--sh)}
+.acard-ico{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:14px}
+.acard h3{font-size:16px;font-weight:700;color:var(--n);margin-bottom:8px}
+.acard > p{font-size:14px;color:var(--mt);line-height:1.65;margin-bottom:14px}
+.atags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.afoot{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--bd);padding-top:14px}
+.ap-lbl{font-size:11px;color:var(--mt);font-weight:600;margin-bottom:2px}
+.ap-val{font-family:'Outfit',sans-serif;font-size:20px;font-weight:800;color:var(--n)}
+.asubmit{background:var(--n);color:#fff;font-size:13px;font-weight:700;padding:9px 18px;border-radius:8px;transition:var(--tr);cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif}
+.asubmit:hover{background:var(--g)}
 
-/* Countries served */
-.countries-wrap { background: var(--navy); border-radius: var(--radius-lg); padding: 40px; margin-top: 60px; text-align: center; }
-.countries-wrap h3 { font-size: 24px; font-weight: 800; color: white; margin-bottom: 8px; }
-.countries-wrap p { font-size: 15px; color: rgba(255,255,255,0.6); margin-bottom: 24px; }
-.country-pills { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
-.cpill {
-  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
-  color: rgba(255,255,255,0.8); font-size: 13px; font-weight: 500;
-  padding: 7px 16px; border-radius: 50px;
-  display: flex; align-items: center; gap: 6px;
-}
+/* =====================================================
+   HOW IT WORKS STEPS
+   ===================================================== */
+.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px;position:relative}
+.how-grid::before{content:'';position:absolute;top:32px;left:13%;right:13%;height:2px;background:linear-gradient(90deg,var(--g),rgba(29,185,110,.15));pointer-events:none;z-index:0}
+.how-step{text-align:center;position:relative;z-index:1}
+.how-n{width:66px;height:66px;border-radius:50%;background:#fff;border:3px solid var(--g);display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-size:22px;font-weight:900;color:var(--g);margin:0 auto 20px;box-shadow:var(--sh)}
+.how-step h3{font-size:15px;font-weight:700;color:var(--n);margin-bottom:8px}
+.how-step p{font-size:13px;color:var(--mt);line-height:1.65}
 
-/* ============================================================
+/* =====================================================
    TESTIMONIALS
-   ============================================================ */
-.testimonials-section { background: var(--navy); }
-.test-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 48px; }
-.test-card {
-  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
-  border-radius: var(--radius); padding: 28px;
-  transition: var(--transition);
-}
-.test-card:hover { background: rgba(255,255,255,0.09); transform: translateY(-3px); }
-.test-stars { color: var(--gold); font-size: 14px; letter-spacing: 2px; margin-bottom: 14px; }
-.test-text { font-size: 15px; color: rgba(255,255,255,0.78); line-height: 1.75; margin-bottom: 20px; font-style: italic; }
-.test-author { display: flex; align-items: center; gap: 12px; }
-.test-avatar { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; color: white; flex-shrink: 0; }
-.test-name { font-weight: 700; color: white; font-size: 15px; }
-.test-role { font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 2px; }
+   ===================================================== */
+.testi-bg{background:var(--n)}
+.tg3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.tcard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:26px;transition:var(--tr)}
+.tcard:hover{background:rgba(255,255,255,.09);transform:translateY(-3px)}
+.t-stars{color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:12px}
+.t-text{font-size:15px;color:rgba(255,255,255,.78);line-height:1.75;margin-bottom:18px;font-style:italic}
+.t-author{display:flex;align-items:center;gap:12px}
+.t-ava{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:#fff;flex-shrink:0}
+.t-name{font-weight:700;color:#fff;font-size:14px}
+.t-role{font-size:12px;color:rgba(255,255,255,.45);margin-top:2px}
 
-/* ============================================================
-   HOW IT WORKS
-   ============================================================ */
-.how-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; margin-top: 48px; position: relative; }
-.how-grid::before {
-  content: ''; position: absolute; top: 34px; left: 12%; right: 12%; height: 2px;
-  background: linear-gradient(90deg, var(--green), rgba(34,196,122,0.2));
-}
-.how-step { text-align: center; position: relative; }
-.how-num {
-  width: 68px; height: 68px; border-radius: 50%;
-  background: var(--navy); border: 3px solid var(--green);
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; color: var(--green);
-  margin: 0 auto 20px; position: relative; z-index: 1;
-  background: white;
-}
-.how-step h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
-.how-step p { font-size: 14px; color: var(--gray-text); line-height: 1.65; }
+/* =====================================================
+   USP ROW (Assignment page top)
+   ===================================================== */
+.usp-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:52px}
+.usp{background:var(--bg);border-radius:var(--r);padding:22px 18px;text-align:center;border:1.5px solid transparent;transition:var(--tr)}
+.usp:hover{border-color:var(--g);background:#fff;box-shadow:var(--sh)}
+.usp-ico{font-size:30px;margin-bottom:10px}
+.usp h4{font-size:14px;font-weight:700;color:var(--n);margin-bottom:4px}
+.usp p{font-size:13px;color:var(--mt)}
 
-/* ============================================================
-   ABOUT PAGE
-   ============================================================ */
-.about-hero {
-  background: var(--navy);
-  background-image: radial-gradient(ellipse 60% 70% at 90% 30%, rgba(34,196,122,0.12) 0%, transparent 65%);
-  padding: 90px 0;
-}
-.about-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-.about-hero-grid h1 { font-size: clamp(32px,4vw,48px); font-weight: 800; color: white; margin-bottom: 16px; }
-.about-hero-grid h1 em { color: var(--green); font-style: normal; }
-.about-hero-grid p { font-size: 17px; color: rgba(255,255,255,0.68); line-height: 1.8; }
-.about-values-panel {
-  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
-  border-radius: var(--radius-lg); padding: 32px;
-}
-.about-values-panel h4 { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px; }
-.value-row { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 18px; }
-.value-row:last-child { margin-bottom: 0; }
-.value-icon-box { width: 40px; height: 40px; border-radius: 10px; background: rgba(34,196,122,0.15); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
-.value-row h5 { font-size: 15px; font-weight: 700; color: white; margin-bottom: 3px; }
-.value-row p { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.5; }
-.team-section { background: var(--off-white); }
-.team-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; margin-top: 48px; }
-.team-card { background: white; border: 1px solid var(--gray-line); border-radius: var(--radius); padding: 28px 20px; text-align: center; transition: var(--transition); }
-.team-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
-.team-avatar { width: 72px; height: 72px; border-radius: 50%; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: 800; color: white; }
-.team-card h4 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
-.team-card p { font-size: 13px; color: var(--gray-text); }
-.mission-section { background: white; }
-.mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-.mission-visual {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
-  border-radius: var(--radius-lg); padding: 40px; color: white;
-}
-.mission-visual h3 { font-size: 28px; font-weight: 800; margin-bottom: 12px; }
-.mission-visual p { font-size: 16px; opacity: 0.7; line-height: 1.75; margin-bottom: 24px; }
-.mission-stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.m-stat { background: rgba(255,255,255,0.07); border-radius: 10px; padding: 16px 20px; }
-.m-stat strong { display: block; font-family: 'Syne', sans-serif; font-size: 30px; font-weight: 800; color: var(--green); }
-.m-stat span { font-size: 13px; opacity: 0.6; }
+/* =====================================================
+   COUNTRIES BOX
+   ===================================================== */
+.cbox{background:var(--n);border-radius:var(--r2);padding:40px;margin-top:60px;text-align:center}
+.cbox h3{font-size:24px;font-weight:800;color:#fff;margin-bottom:8px}
+.cbox > p{font-size:15px;color:rgba(255,255,255,.6);margin-bottom:24px}
+.cpills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.cpill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.78);font-size:13px;font-weight:500;padding:7px 16px;border-radius:50px;display:flex;align-items:center;gap:6px}
 
-/* ============================================================
-   CONTACT PAGE
-   ============================================================ */
-.contact-section { background: var(--off-white); }
-.contact-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 40px; margin-top: 48px; }
-.contact-info-col h3 { font-size: 24px; font-weight: 800; color: var(--navy); margin-bottom: 12px; }
-.contact-info-col p { font-size: 15px; color: var(--gray-text); line-height: 1.75; margin-bottom: 32px; }
-.contact-item { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
-.contact-icon-box { width: 48px; height: 48px; border-radius: 12px; background: white; border: 1px solid var(--gray-line); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
-.contact-item h5 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
-.contact-item p { font-size: 14px; color: var(--gray-text); margin-bottom: 0; }
-.contact-social { display: flex; gap: 10px; margin-top: 32px; }
-.social-btn {
-  width: 44px; height: 44px; border-radius: 10px; border: 1.5px solid var(--gray-line);
-  background: white; display: flex; align-items: center; justify-content: center;
-  font-size: 18px; transition: var(--transition);
-}
-.social-btn:hover { background: var(--navy); border-color: var(--navy); transform: translateY(-2px); }
-.contact-form-box { background: white; border-radius: var(--radius-lg); padding: 36px; border: 1px solid var(--gray-line); box-shadow: var(--shadow-sm); }
-.contact-form-box h3 { font-size: 22px; font-weight: 800; color: var(--navy); margin-bottom: 24px; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.form-group { margin-bottom: 16px; }
-.form-group label { display: block; font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 7px; }
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%; padding: 12px 16px;
-  border: 1.5px solid var(--gray-line); border-radius: var(--radius-sm);
-  font-size: 14px; color: var(--text);
-  outline: none; transition: var(--transition);
-  background: var(--off-white);
-}
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus { border-color: var(--green); background: white; box-shadow: 0 0 0 3px rgba(34,196,122,0.1); }
-.form-group textarea { min-height: 110px; resize: vertical; }
-.form-submit {
-  width: 100%; background: var(--green); color: white;
-  font-size: 16px; font-weight: 700; padding: 15px; border-radius: 10px;
-  transition: var(--transition); margin-top: 6px;
-}
-.form-submit:hover { background: var(--green-dark); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(34,196,122,0.3); }
+/* =====================================================
+   PAGE HERO BANNER
+   ===================================================== */
+.ph{background:var(--n);background-image:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(29,185,110,.1) 0%,transparent 60%);padding:70px 0;text-align:center}
+.ph h1{font-size:clamp(28px,4vw,46px);font-weight:900;color:#fff;margin-bottom:14px}
+.ph p{font-size:18px;color:rgba(255,255,255,.65);max-width:580px;margin:0 auto;line-height:1.75}
 
-/* ============================================================
-   FAQ STRIP
-   ============================================================ */
-.faq-strip { background: white; }
-.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 48px; }
-.faq-item {
-  background: var(--off-white); border: 1px solid var(--gray-line); border-radius: var(--radius);
-  padding: 22px 24px; cursor: pointer; transition: var(--transition);
-}
-.faq-item:hover { border-color: var(--green); }
-.faq-item.open { border-color: var(--green); background: var(--green-light); }
-.faq-q { display: flex; align-items: center; justify-content: space-between; }
-.faq-q span { font-size: 15px; font-weight: 700; color: var(--navy); }
-.faq-toggle { width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; flex-shrink: 0; transition: var(--transition); }
-.faq-item.open .faq-toggle { background: var(--green); transform: rotate(45deg); }
-.faq-a { display: none; font-size: 14px; color: var(--gray-text); line-height: 1.7; margin-top: 12px; }
-.faq-item.open .faq-a { display: block; }
-
-/* ============================================================
-   CTA BAND
-   ============================================================ */
-.cta-band {
-  background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
-  padding: 70px 0; text-align: center;
-}
-.cta-band h2 { font-size: 36px; font-weight: 800; color: white; margin-bottom: 12px; }
-.cta-band p { font-size: 18px; color: rgba(255,255,255,0.82); margin-bottom: 32px; }
-.cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-.cta-btn-white {
-  background: white; color: var(--green-dark);
-  font-size: 16px; font-weight: 800; padding: 15px 32px; border-radius: 10px;
-  transition: var(--transition); display: inline-block;
-}
-.cta-btn-white:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.15); }
-.cta-btn-outline {
-  background: transparent; color: white; border: 2px solid rgba(255,255,255,0.6);
-  font-size: 16px; font-weight: 700; padding: 15px 32px; border-radius: 10px;
-  transition: var(--transition); display: inline-block;
-}
-.cta-btn-outline:hover { border-color: white; background: rgba(255,255,255,0.1); }
-
-/* ============================================================
-   FOOTER
-   ============================================================ */
-footer { background: var(--navy); padding-top: 64px; }
-.footer-top { display: grid; grid-template-columns: 2.2fr 1fr 1fr 1.2fr; gap: 40px; padding-bottom: 50px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-.footer-brand-col { }
-.footer-logo-wrap { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
-.footer-logo-icon { width: 40px; height: 40px; border-radius: var(--radius-sm); background: var(--green); display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 16px; color: white; }
-.footer-brand-name { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 20px; color: white; }
-.footer-brand-name em { color: var(--green); font-style: normal; }
-.footer-brand-col > p { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.75; max-width: 270px; margin-bottom: 20px; }
-.footer-tagline { font-size: 13px; font-weight: 600; color: var(--green); font-style: italic; }
-.footer-col h5 { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: white; margin-bottom: 16px; }
-.footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 10px; cursor: pointer; transition: color 0.2s; }
-.footer-col a:hover { color: var(--green); }
-.footer-newsletter h5 { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: white; margin-bottom: 8px; }
-.footer-newsletter p { font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 16px; line-height: 1.55; }
-.newsletter-form { display: flex; gap: 0; }
-.newsletter-form input { flex: 1; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: white; padding: 11px 14px; font-size: 13px; border-radius: 8px 0 0 8px; outline: none; }
-.newsletter-form input::placeholder { color: rgba(255,255,255,0.35); }
-.newsletter-form button { background: var(--green); color: white; font-size: 13px; font-weight: 700; padding: 11px 16px; border-radius: 0 8px 8px 0; transition: background 0.2s; white-space: nowrap; }
-.newsletter-form button:hover { background: var(--green-dark); }
-.footer-bottom { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; font-size: 13px; color: rgba(255,255,255,0.4); }
-.footer-bottom-right { display: flex; gap: 24px; }
-.footer-bottom-right a { color: rgba(255,255,255,0.4); cursor: pointer; transition: color 0.2s; }
-.footer-bottom-right a:hover { color: var(--green); }
-
-/* ============================================================
-   PAGE HERO
-   ============================================================ */
-.page-hero-section {
-  background: var(--navy);
-  background-image: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(34,196,122,0.1) 0%, transparent 60%);
-  padding: 70px 0; text-align: center;
-}
-.page-hero-section h1 { font-size: clamp(30px,4vw,46px); font-weight: 800; color: white; margin-bottom: 14px; }
-.page-hero-section p { font-size: 18px; color: rgba(255,255,255,0.65); max-width: 560px; margin: 0 auto; line-height: 1.75; }
-
-/* ============================================================
+/* =====================================================
    FILTER BAR
-   ============================================================ */
-.filter-bar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 32px; }
-.fb-btn {
-  background: var(--off-white); color: var(--gray-text); border: 1.5px solid var(--gray-line);
-  font-size: 14px; font-weight: 600; padding: 9px 20px; border-radius: 50px;
-  transition: var(--transition);
-}
-.fb-btn.active, .fb-btn:hover { background: var(--navy); color: white; border-color: var(--navy); }
+   ===================================================== */
+.fbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.fb{background:var(--bg);color:var(--mt);border:1.5px solid var(--bd);font-size:14px;font-weight:600;padding:9px 20px;border-radius:50px;transition:var(--tr);cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif}
+.fb.on,.fb:hover{background:var(--n);color:#fff;border-color:var(--n)}
 
-/* ============================================================
+/* =====================================================
+   ABOUT PAGE
+   ===================================================== */
+.ab-hero{background:var(--n);background-image:radial-gradient(ellipse 60% 70% at 85% 40%,rgba(29,185,110,.12) 0%,transparent 60%);padding:88px 0}
+.ab-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.ab-grid h1{font-size:clamp(30px,4vw,48px);font-weight:900;color:#fff;margin-bottom:14px}
+.ab-grid h1 em{color:var(--g);font-style:normal}
+.ab-grid p{font-size:17px;color:rgba(255,255,255,.68);line-height:1.8}
+.val-panel{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r2);padding:30px}
+.vrow{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px}
+.vrow:last-child{margin-bottom:0}
+.v-ico{width:40px;height:40px;border-radius:10px;background:rgba(29,185,110,.15);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.vrow h5{font-size:15px;font-weight:700;color:#fff;margin-bottom:3px}
+.vrow p{font-size:13px;color:rgba(255,255,255,.55);line-height:1.55}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
+.tmcard{background:#fff;border:1px solid var(--bd);border-radius:var(--r);padding:26px 20px;text-align:center;transition:var(--tr)}
+.tmcard:hover{box-shadow:var(--sh);transform:translateY(-3px)}
+.tm-ava{width:72px;height:72px;border-radius:50%;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff}
+.tmcard h4{font-size:15px;font-weight:700;color:var(--n);margin-bottom:4px}
+.tmcard p{font-size:13px;color:var(--mt)}
+.mis-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.mis-vis{background:linear-gradient(135deg,var(--n) 0%,var(--n2) 100%);border-radius:var(--r2);padding:40px;color:#fff}
+.mis-vis h3{font-size:26px;font-weight:800;margin-bottom:10px}
+.mis-vis p{font-size:16px;opacity:.7;line-height:1.75;margin-bottom:24px}
+.mstats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.mstat{background:rgba(255,255,255,.07);border-radius:10px;padding:16px 18px}
+.mstat strong{display:block;font-family:'Outfit',sans-serif;font-size:30px;font-weight:900;color:var(--g)}
+.mstat span{font-size:13px;opacity:.6}
+
+/* =====================================================
+   CONTACT PAGE
+   ===================================================== */
+.ct-grid{display:grid;grid-template-columns:5fr 7fr;gap:40px;margin-top:48px;align-items:start}
+.ci h3{font-size:24px;font-weight:800;color:var(--n);margin-bottom:10px}
+.ci>p{font-size:15px;color:var(--mt);line-height:1.75;margin-bottom:28px}
+.citem{display:flex;align-items:flex-start;gap:16px;margin-bottom:22px}
+.citem-ico{width:48px;height:48px;border-radius:12px;background:#fff;border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;box-shadow:var(--sh)}
+.citem h5{font-size:13px;font-weight:700;color:var(--n);margin-bottom:3px}
+.citem p{font-size:14px;color:var(--mt)}
+.socials{display:flex;gap:10px;margin-top:28px}
+.soc{width:44px;height:44px;border-radius:10px;border:1.5px solid var(--bd);background:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;transition:var(--tr);cursor:pointer}
+.soc:hover{background:var(--n);border-color:var(--n);transform:translateY(-2px)}
+.cf-box{background:#fff;border-radius:var(--r2);padding:36px;border:1px solid var(--bd);box-shadow:var(--sh)}
+.cf-box h3{font-size:22px;font-weight:800;color:var(--n);margin-bottom:24px}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fg{margin-bottom:16px}
+.fg label{display:block;font-size:13px;font-weight:700;color:var(--n);margin-bottom:7px}
+.fg input,.fg select,.fg textarea{width:100%;padding:12px 16px;border:1.5px solid var(--bd);border-radius:var(--r);font-size:14px;color:#111827;outline:none;transition:var(--tr);background:var(--bg);font-family:'Plus Jakarta Sans',sans-serif}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--g);background:#fff;box-shadow:0 0 0 3px rgba(29,185,110,.1)}
+.fg textarea{min-height:110px;resize:vertical}
+.fsub{width:100%;background:var(--g);color:#fff;font-size:16px;font-weight:700;padding:15px;border-radius:var(--r);transition:var(--tr);margin-top:6px;font-family:'Plus Jakarta Sans',sans-serif;cursor:pointer}
+.fsub:hover{background:var(--gd);transform:translateY(-1px);box-shadow:0 8px 24px rgba(29,185,110,.3)}
+
+/* =====================================================
+   FAQ
+   ===================================================== */
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px}
+.faq{background:#fff;border:1px solid var(--bd);border-radius:var(--r);padding:20px 22px;cursor:pointer;transition:var(--tr)}
+.faq:hover{border-color:var(--g)}
+.faq.open{border-color:var(--g);background:var(--gl)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.faq-q span{font-size:15px;font-weight:700;color:var(--n)}
+.faq-tog{width:28px;height:28px;border-radius:50%;background:var(--n);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;flex-shrink:0;transition:var(--tr)}
+.faq.open .faq-tog{background:var(--g);transform:rotate(45deg)}
+.faq-a{display:none;font-size:14px;color:var(--mt);line-height:1.72;margin-top:12px}
+.faq.open .faq-a{display:block}
+
+/* =====================================================
+   CTA BAND
+   ===================================================== */
+.cta-band{background:linear-gradient(135deg,var(--gd) 0%,var(--g) 100%);padding:70px 0;text-align:center}
+.cta-band h2{font-size:clamp(26px,3.5vw,38px);font-weight:900;color:#fff;margin-bottom:12px}
+.cta-band p{font-size:18px;color:rgba(255,255,255,.84);margin-bottom:32px}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta-w{background:#fff;color:var(--gd);font-size:16px;font-weight:800;padding:15px 32px;border-radius:var(--r);transition:var(--tr);display:inline-block;cursor:pointer;font-family:'Outfit',sans-serif}
+.cta-w:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.15)}
+.cta-o{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);font-size:16px;font-weight:700;padding:15px 32px;border-radius:var(--r);transition:var(--tr);display:inline-block;cursor:pointer;font-family:'Outfit',sans-serif}
+.cta-o:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+footer{background:var(--n);padding-top:64px}
+.ft-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1.3fr;gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.1)}
+.ft-brand p{font-size:14px;color:rgba(255,255,255,.5);line-height:1.75;max-width:270px;margin:14px 0 16px}
+.ft-tagline{font-size:13px;font-weight:600;color:var(--g);font-style:italic}
+.ft-col h5{font-family:'Outfit',sans-serif;font-size:14px;font-weight:700;color:#fff;margin-bottom:16px}
+.ft-col a{display:block;font-size:14px;color:rgba(255,255,255,.5);margin-bottom:10px;cursor:pointer;transition:color .2s}
+.ft-col a:hover{color:var(--g)}
+.ft-nl h5{font-family:'Outfit',sans-serif;font-size:14px;font-weight:700;color:#fff;margin-bottom:8px}
+.ft-nl p{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:14px;line-height:1.55}
+.nl-form{display:flex}
+.nl-form input{flex:1;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;padding:11px 14px;font-size:13px;border-radius:var(--r) 0 0 var(--r);outline:none;font-family:'Plus Jakarta Sans',sans-serif}
+.nl-form input::placeholder{color:rgba(255,255,255,.35)}
+.nl-form button{background:var(--g);color:#fff;font-size:13px;font-weight:700;padding:11px 16px;border-radius:0 var(--r) var(--r) 0;cursor:pointer;transition:background .2s;white-space:nowrap;font-family:'Plus Jakarta Sans',sans-serif}
+.nl-form button:hover{background:var(--gd)}
+.ft-socs{display:flex;gap:10px;margin-top:16px}
+.ft-soc{width:38px;height:38px;border-radius:8px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;transition:var(--tr)}
+.ft-soc:hover{background:var(--g);border-color:var(--g);transform:translateY(-2px)}
+.ft-bottom{display:flex;align-items:center;justify-content:space-between;padding:18px 0;font-size:13px;color:rgba(255,255,255,.38);flex-wrap:wrap;gap:10px}
+.ft-bottom-r{display:flex;gap:20px}
+.ft-bottom-r a{color:rgba(255,255,255,.38);cursor:pointer;transition:color .2s}
+.ft-bottom-r a:hover{color:var(--g)}
+
+/* =====================================================
    TOAST NOTIFICATION
-   ============================================================ */
-#toast {
-  position: fixed; bottom: 28px; right: 28px; z-index: 9999;
-  background: var(--navy); color: white;
-  padding: 15px 22px; border-radius: 12px;
-  font-size: 14px; font-weight: 500;
-  border-left: 4px solid var(--green);
-  box-shadow: 0 10px 32px rgba(0,0,0,0.25);
-  transform: translateY(80px); opacity: 0;
-  transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
-  max-width: 340px;
-}
-#toast.show { transform: translateY(0); opacity: 1; }
+   ===================================================== */
+#toast{position:fixed;bottom:26px;right:26px;z-index:9999;background:var(--n);color:#fff;padding:14px 20px;border-radius:var(--r);font-size:14px;font-weight:500;border-left:4px solid var(--g);box-shadow:0 10px 32px rgba(0,0,0,.22);max-width:340px;transform:translateY(80px);opacity:0;transition:all .35s cubic-bezier(.4,0,.2,1)}
+#toast.show{transform:translateY(0);opacity:1}
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
-@media (max-width: 900px) {
-  .hero-grid, .about-hero-grid, .mission-grid, .purpose-grid,
-  .contact-grid, .footer-top { grid-template-columns: 1fr; }
-  .hero-panel { display: none; }
-  .wcat-grid, .cards-grid-3, .test-grid, .team-grid,
-  .how-grid { grid-template-columns: repeat(2,1fr); }
-  .stats-band-inner { grid-template-columns: repeat(2,1fr); }
-  .cards-grid-2, .faq-grid { grid-template-columns: 1fr; }
+/* =====================================================
+   RESPONSIVE — TABLET
+   ===================================================== */
+@media(max-width:1024px){
+  .hero-grid,.ab-grid,.mis-grid{grid-template-columns:1fr}
+  .hero-card-wrap{display:none}
+  .cats-grid{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(2,1fr)}
+  .tg3{grid-template-columns:repeat(2,1fr)}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .ft-grid{grid-template-columns:1fr 1fr}
+  .sband-inner{grid-template-columns:repeat(2,1fr)}
+  .usp-row{grid-template-columns:repeat(2,1fr)}
+  .ct-grid{grid-template-columns:1fr}
+  .faq-grid{grid-template-columns:1fr}
+  .pillars-grid{grid-template-columns:1fr}
+  .how-grid{grid-template-columns:repeat(2,1fr)}
+  .how-grid::before{display:none}
 }
-@media (max-width: 600px) {
-  .nav-links { display: none; }
-  .wcat-grid, .cards-grid-3, .test-grid, .team-grid, .how-grid, .stats-band-inner { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
-  .hero-btns, .cta-btns { flex-direction: column; }
-  .section-pad { padding: 60px 0; }
+
+/* =====================================================
+   RESPONSIVE — MOBILE
+   ===================================================== */
+@media(max-width:768px){
+  .nav-links,.nav-right{display:none}
+  .hamburger{display:flex}
+  .hero{padding:60px 0 52px}
+  .sec{padding:60px 0}
+  .g3,.g2,.cats-grid,.tg3{grid-template-columns:1fr}
+  .sband-inner{grid-template-columns:repeat(2,1fr)}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .fr{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column;align-items:flex-start}
+  .cta-btns{flex-direction:column;align-items:center}
+  .how-grid{grid-template-columns:1fr;gap:28px}
+  .usp-row{grid-template-columns:1fr 1fr}
+  .ft-grid{grid-template-columns:1fr}
+  .tb-inner .tb-dot:nth-child(n+5){display:none}
+  .tb-inner>span:last-child{display:none}
+  .mis-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .sband-inner{grid-template-columns:1fr}
+  .usp-row{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr}
+  .hero h1{font-size:30px}
+  .hero-stats{gap:20px}
+  .wrap{padding:0 16px}
 }
 </style>
 </head>
 <body>
 
-<!-- ============================================================
-     ANNOUNCEMENT BAR
-     ============================================================ -->
-<div class="announce-bar">
-  <div class="announce-inner">
-    <span>🎓 New Batch Starting May 2025</span>
-    <div class="announce-divider"></div>
-    <span>🌍 Serving 40+ Countries Worldwide</span>
-    <div class="announce-divider"></div>
-    <span>📞 WhatsApp: +91 XXXXXXXXXX</span>
-    <div class="announce-divider"></div>
-    <span>✅ 100% Satisfaction Guarantee</span>
+<!-- =====================================================
+     TOP BAR
+     ===================================================== -->
+<div class="topbar">
+  <div class="tb-inner">
+    <span>🎓 New Batches Starting Soon</span>
+    <div class="tb-dot"></div>
+    <span>🌍 Serving <strong>40+ Countries</strong> Worldwide</span>
+    <div class="tb-dot"></div>
+    <span>📞 WhatsApp: <strong>+91 XXXXXXXXXX</strong></span>
+    <div class="tb-dot"></div>
+    <span>✅ 100% Original Work. On-Time Delivery</span>
   </div>
 </div>
 
-<!-- ============================================================
+<!-- =====================================================
      NAVBAR
-     ============================================================ -->
+     ===================================================== -->
 <nav class="navbar">
-  <div class="container">
-    <div class="nav-brand" onclick="showPage('home')">
-      <div class="nav-logo-box">TE</div>
+  <div class="wrap">
+    <div class="brand" onclick="go('home')">
+      <div class="brand-ico">TE</div>
       <div>
-        <div class="nav-brand-text">Tech<em>Era</em></div>
-        <div class="nav-tagline">Learn Here · Lead Anywhere</div>
+        <div class="brand-txt">Tech<span>Era</span></div>
+        <div class="brand-tag">Learn Here · Lead Anywhere</div>
       </div>
     </div>
     <div class="nav-links">
-      <button class="nav-link active" id="nav-home"        onclick="showPage('home')">Home</button>
-      <button class="nav-link"        id="nav-workshops"   onclick="showPage('workshops')">Workshops</button>
-      <button class="nav-link"        id="nav-assignments" onclick="showPage('assignments')">Assignments</button>
-      <button class="nav-link"        id="nav-about"       onclick="showPage('about')">About Us</button>
-      <button class="nav-link"        id="nav-contact"     onclick="showPage('contact')">Contact</button>
+      <button class="nl on" id="nl-home"        onclick="go('home')">Home</button>
+      <button class="nl"    id="nl-workshops"   onclick="go('workshops')">Workshops</button>
+      <button class="nl"    id="nl-assignments" onclick="go('assignments')">Assignment Help</button>
+      <button class="nl"    id="nl-about"       onclick="go('about')">About Us</button>
+      <button class="nl"    id="nl-contact"     onclick="go('contact')">Contact</button>
     </div>
-    <div class="nav-cta-wrap">
-      <button class="nav-whatsapp" onclick="showToast('Opening WhatsApp Chat...')">💬 WhatsApp</button>
-      <button class="nav-cta"      onclick="showPage('workshops')">Enroll Now</button>
+    <div class="nav-right">
+      <button class="btn btn-wa btn-sm" onclick="toast('Opening WhatsApp... 💬')">💬 WhatsApp</button>
+      <button class="btn btn-g btn-sm"  onclick="go('workshops')">Enroll Now →</button>
+    </div>
+    <div class="hamburger" id="ham" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
     </div>
   </div>
 </nav>
 
-<!-- ============================================================
+<!-- Mobile Menu -->
+<div class="mob-menu" id="mobMenu">
+  <span class="mm-link" onclick="go('home');closeMenu()">🏠 Home</span>
+  <span class="mm-link" onclick="go('workshops');closeMenu()">🎯 Workshops</span>
+  <span class="mm-link" onclick="go('assignments');closeMenu()">📝 Assignment Help</span>
+  <span class="mm-link" onclick="go('about');closeMenu()">ℹ️ About Us</span>
+  <span class="mm-link" onclick="go('contact');closeMenu()">📞 Contact</span>
+  <div class="mm-btns">
+    <button class="btn btn-wa" style="width:100%;justify-content:center" onclick="toast('Opening WhatsApp... 💬');closeMenu()">💬 WhatsApp Us</button>
+    <button class="btn btn-g"  style="width:100%;justify-content:center" onclick="go('workshops');closeMenu()">🎯 Browse Workshops</button>
+  </div>
+</div>
+
+<!-- =====================================================
      PAGE: HOME
-     ============================================================ -->
+     ===================================================== -->
 <div class="page active" id="page-home">
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container">
+    <div class="wrap">
       <div class="hero-grid">
         <div>
-          <div class="hero-eyebrow">India's Trusted EdTech Platform</div>
-          <h1>Learn Here,<br><span class="accent">Lead Anywhere</span></h1>
-          <p class="hero-desc">
-            World-class paid workshops in Programming, Marketing, Creative & Visual Arts — plus a one-stop assignment help solution for students across the globe.
-          </p>
+          <div class="hero-pill">India's Trusted EdTech Platform</div>
+          <h1>Learn Here,<br><em>Lead Anywhere</em></h1>
+          <p class="hero-p">World-class paid workshops in Programming, Digital Marketing, Creative & Visual Arts — plus a one-stop assignment help solution for students across the globe.</p>
           <div class="hero-btns">
-            <button class="btn btn-primary" onclick="showPage('workshops')">🎯 Explore Workshops</button>
-            <button class="btn btn-outline-white" onclick="showPage('assignments')">📝 Assignment Help</button>
+            <button class="btn btn-g btn-lg" onclick="go('workshops')">🎯 Explore Workshops</button>
+            <button class="btn btn-ow btn-lg" onclick="go('assignments')">📝 Assignment Help</button>
           </div>
           <div class="hero-stats">
-            <div class="hero-stat-item"><strong>50K+</strong><span>Students Trained</span></div>
-            <div class="hero-stat-item"><strong>200+</strong><span>Workshops Done</span></div>
-            <div class="hero-stat-item"><strong>40+</strong><span>Countries Served</span></div>
-            <div class="hero-stat-item"><strong>98%</strong><span>Success Rate</span></div>
+            <div class="hs"><strong>50K+</strong><span>Students Trained</span></div>
+            <div class="hs"><strong>200+</strong><span>Workshops Done</span></div>
+            <div class="hs"><strong>40+</strong><span>Countries Served</span></div>
+            <div class="hs"><strong>98%</strong><span>Success Rate</span></div>
           </div>
         </div>
-        <div class="hero-panel">
-          <div class="hero-panel-badge">🏆 Top Rated 2024</div>
-          <div class="hp-head">Your Learning Dashboard</div>
-          <div class="course-row">
-            <div class="cr-icon" style="background:rgba(34,196,122,0.15)">🐍</div>
-            <div style="flex:1">
-              <div class="cr-title">Python Programming Workshop</div>
-              <div class="cr-sub">Live · 3 Days · Beginner Friendly</div>
-              <div class="cr-prog"><div class="cr-prog-fill" style="width:72%"></div></div>
+        <div class="hero-card-wrap">
+          <div class="hcard">
+            <div class="hcard-badge">🏆 Top Rated 2025</div>
+            <div class="hcard-lbl">Your Learning Dashboard</div>
+            <div class="prow">
+              <div class="prow-ico" style="background:rgba(29,185,110,.15)">🐍</div>
+              <div class="prow-info">
+                <div class="prow-title">Python Programming Workshop</div>
+                <div class="prow-sub">Live · 3 Days · Beginner Friendly</div>
+                <div class="prow-bar"><div class="prow-fill" style="width:72%"></div></div>
+              </div>
+              <div class="prow-pct">72%</div>
             </div>
-            <div style="font-size:13px;color:var(--green);font-weight:700;">72%</div>
-          </div>
-          <div class="course-row">
-            <div class="cr-icon" style="background:rgba(240,165,0,0.15)">📊</div>
-            <div style="flex:1">
-              <div class="cr-title">Digital Marketing Mastery</div>
-              <div class="cr-sub">Recorded · 20 hrs · All Levels</div>
-              <div class="cr-prog"><div class="cr-prog-fill" style="width:45%"></div></div>
+            <div class="prow">
+              <div class="prow-ico" style="background:rgba(245,158,11,.15)">📊</div>
+              <div class="prow-info">
+                <div class="prow-title">Digital Marketing Mastery</div>
+                <div class="prow-sub">Recorded · 20 hrs · All Levels</div>
+                <div class="prow-bar"><div class="prow-fill" style="width:45%"></div></div>
+              </div>
+              <div class="prow-pct">45%</div>
             </div>
-            <div style="font-size:13px;color:var(--green);font-weight:700;">45%</div>
-          </div>
-          <div class="course-row">
-            <div class="cr-icon" style="background:rgba(224,53,53,0.15)">🎨</div>
-            <div style="flex:1">
-              <div class="cr-title">Graphic Design & Visual Arts</div>
-              <div class="cr-sub">Live + Recorded · Intermediate</div>
-              <div class="cr-prog"><div class="cr-prog-fill" style="width:38%"></div></div>
+            <div class="prow">
+              <div class="prow-ico" style="background:rgba(239,68,68,.15)">🎨</div>
+              <div class="prow-info">
+                <div class="prow-title">Graphic Design & Visual Arts</div>
+                <div class="prow-sub">Live + Recorded · Intermediate</div>
+                <div class="prow-bar"><div class="prow-fill" style="width:38%"></div></div>
+              </div>
+              <div class="prow-pct">38%</div>
             </div>
-            <div style="font-size:13px;color:var(--green);font-weight:700;">38%</div>
-          </div>
-          <div class="hp-divider"></div>
-          <div class="hp-live-row">
-            <div class="live-dot">Live Workshop in Progress</div>
-            <span style="font-size:12px;color:rgba(255,255,255,0.4);">248 watching</span>
-          </div>
-          <div class="hp-student-row">
-            <div class="avatar">R</div>
-            <div class="info">
-              <strong>Riya Shah just enrolled</strong>
-              MBA Project Help · Finance Case Study
+            <div class="hc-sep"></div>
+            <div class="live-row">
+              <div class="live-dot">Live Session in Progress</div>
+              <span style="font-size:12px;color:rgba(255,255,255,.38)">312 watching</span>
             </div>
-            <div class="time">2 min ago</div>
+            <div class="enroll-row">
+              <div class="e-ava">R</div>
+              <div class="e-info">
+                <strong>Riya Shah just enrolled</strong>
+                MBA Project Help · Finance Case Study
+              </div>
+              <div class="e-time">2 min ago</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- STATS -->
-  <section class="stats-band">
-    <div class="container">
-      <div class="stats-band-inner">
-        <div class="stat-block"><strong>50,000+</strong><span>Students Worldwide</span></div>
-        <div class="stat-block"><strong>200+</strong><span>Workshops Delivered</span></div>
-        <div class="stat-block"><strong>1,000+</strong><span>Projects & Assignments Solved</span></div>
-        <div class="stat-block"><strong>40+</strong><span>Countries Reached</span></div>
-      </div>
+  <!-- STATS BAND -->
+  <div class="sband">
+    <div class="sband-inner wrap">
+      <div class="sitem"><strong>50,000+</strong><span>Students Worldwide</span></div>
+      <div class="sitem"><strong>200+</strong><span>Workshops Delivered</span></div>
+      <div class="sitem"><strong>1,000+</strong><span>Assignments Completed</span></div>
+      <div class="sitem"><strong>40+</strong><span>Countries Reached</span></div>
     </div>
-  </section>
+  </div>
 
-  <!-- TWO PURPOSES -->
-  <section class="purpose-section section-pad">
-    <div class="container text-center">
-      <div class="section-label">What We Do</div>
-      <h2 class="section-title">Two Powerful Solutions.<br>One Platform.</h2>
-      <p class="section-sub">TechEra brings together paid skill-building workshops and a complete assignment help service — all in one trusted platform.</p>
-      <div class="purpose-grid" style="margin-top:48px">
-        <div class="purpose-card workshops" onclick="showPage('workshops')">
-          <div class="purpose-icon">🎯</div>
+  <!-- TWO PILLARS -->
+  <section class="sec" style="background:#fff">
+    <div class="wrap tc">
+      <div class="lbl">What We Do</div>
+      <h2 class="h2">Two Powerful Services. One Platform.</h2>
+      <p class="sub">TechEra brings expert-led paid workshops and a complete worldwide assignment help solution together in one trusted platform.</p>
+      <div class="pillars-grid">
+        <div class="pillar p1" onclick="go('workshops')">
+          <div class="pillar-ico">🎯</div>
           <h3>Paid Workshops</h3>
-          <p>Expert-led, hands-on workshops in Programming, Marketing, Creative Design & Visual Arts. Learn from the best. Get certified.</p>
-          <ul class="purpose-list">
-            <li>Programming — Python, Web Dev, App Dev</li>
-            <li>Digital Marketing — SEO, Social Media, Ads</li>
-            <li>Creative Arts — Graphic Design, Animation</li>
-            <li>Visual Arts — Photography, Video Editing</li>
-            <li>Live sessions + recorded access</li>
-            <li>Certificate of completion</li>
+          <p>Expert-led, hands-on workshops in Programming, Marketing, Creative Design & Visual Arts. Real skills. Real certificates.</p>
+          <ul>
+            <li>Programming — Python, Web Dev, App Dev, Cloud</li>
+            <li>Digital Marketing — SEO, Social Media, Google Ads</li>
+            <li>Creative Design — Graphic, UI/UX, Motion, Branding</li>
+            <li>Visual Arts — Photography, Video Editing, YouTube</li>
+            <li>Live sessions + Recorded access included</li>
+            <li>Verified TechEra Certificate on completion</li>
           </ul>
-          <span class="purpose-cta" onclick="showPage('workshops')">Explore Workshops →</span>
+          <span class="pillar-btn">Explore Workshops →</span>
         </div>
-        <div class="purpose-card assignments" onclick="showPage('assignments')">
-          <div class="purpose-icon">📝</div>
+        <div class="pillar p2" onclick="go('assignments')">
+          <div class="pillar-ico">📝</div>
           <h3>Assignment Help</h3>
-          <p>One-stop solution for all college projects, MBA case studies, research papers, programming tasks and university assignments — worldwide.</p>
-          <ul class="purpose-list">
+          <p>One-stop worldwide solution for all college projects, MBA case studies, research papers, programming tasks and university assignments.</p>
+          <ul>
             <li>MBA & Management Assignments</li>
             <li>Engineering & Programming Projects</li>
-            <li>Research Papers & Dissertations</li>
+            <li>Research Papers & PhD Dissertations</li>
             <li>Case Studies & Business Reports</li>
-            <li>Serving 40+ countries globally</li>
-            <li>On-time delivery, 100% original</li>
+            <li>Serving 40+ countries — all time zones</li>
+            <li>100% Original · On-time Delivery</li>
           </ul>
-          <span class="purpose-cta" onclick="showPage('assignments')">Submit Assignment →</span>
+          <span class="pillar-btn">Submit Assignment →</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- WORKSHOP CATEGORIES -->
-  <section style="background:var(--off-white);padding:80px 0;">
-    <div class="container text-center">
-      <div class="section-label">Workshop Categories</div>
-      <h2 class="section-title">Learn Any Skill, Master Your Craft</h2>
-      <p class="section-sub">All our workshops are paid, expert-led and designed for real-world skills that employers want.</p>
-      <div class="wcat-grid">
-        <div class="wcat-card" onclick="showPage('workshops')">
-          <div class="wcat-icon">💻</div>
+  <section class="sec" style="background:var(--bg)">
+    <div class="wrap tc">
+      <div class="lbl">Workshop Categories</div>
+      <h2 class="h2">Learn Any Skill. Master Your Craft.</h2>
+      <p class="sub">All workshops are paid, expert-led and designed to give you real-world career-ready skills.</p>
+      <div class="cats-grid">
+        <div class="ccat" onclick="go('workshops')">
+          <div class="ccat-ico">💻</div>
           <h3>Programming</h3>
-          <p>Python, Web Development, App Dev, DSA, Cloud & more</p>
-          <div class="wcat-count">12 Workshops</div>
+          <p>Python, Web Dev, App Dev, DSA, Cloud & more</p>
+          <div class="ccat-count">12 Workshops</div>
         </div>
-        <div class="wcat-card" onclick="showPage('workshops')">
-          <div class="wcat-icon">📱</div>
+        <div class="ccat" onclick="go('workshops')">
+          <div class="ccat-ico">📱</div>
           <h3>Digital Marketing</h3>
           <p>SEO, Social Media, Google Ads, Email Marketing</p>
-          <div class="wcat-count">8 Workshops</div>
+          <div class="ccat-count">8 Workshops</div>
         </div>
-        <div class="wcat-card" onclick="showPage('workshops')">
-          <div class="wcat-icon">🎨</div>
+        <div class="ccat" onclick="go('workshops')">
+          <div class="ccat-ico">🎨</div>
           <h3>Creative Design</h3>
           <p>Graphic Design, UI/UX, Motion Graphics, Branding</p>
-          <div class="wcat-count">10 Workshops</div>
+          <div class="ccat-count">10 Workshops</div>
         </div>
-        <div class="wcat-card" onclick="showPage('workshops')">
-          <div class="wcat-icon">🎬</div>
+        <div class="ccat" onclick="go('workshops')">
+          <div class="ccat-ico">🎬</div>
           <h3>Visual Arts</h3>
           <p>Photography, Video Editing, Filmmaking, YouTube</p>
-          <div class="wcat-count">7 Workshops</div>
+          <div class="ccat-count">7 Workshops</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- HOW IT WORKS -->
-  <section class="section-pad">
-    <div class="container text-center">
-      <div class="section-label">How It Works</div>
-      <h2 class="section-title">Start Learning in 4 Simple Steps</h2>
-      <p class="section-sub">Getting started with TechEra is simple, fast and completely online.</p>
+  <section class="sec" style="background:#fff">
+    <div class="wrap tc">
+      <div class="lbl">How It Works</div>
+      <h2 class="h2">Start Learning in 4 Simple Steps</h2>
+      <p class="sub">No complicated process. Just sign up, pay, learn and get certified — all online.</p>
       <div class="how-grid">
-        <div class="how-step">
-          <div class="how-num">1</div>
-          <h3>Choose a Workshop</h3>
-          <p>Browse our category of workshops and pick the one that fits your skill goal and schedule.</p>
-        </div>
-        <div class="how-step">
-          <div class="how-num">2</div>
-          <h3>Register & Pay</h3>
-          <p>Complete your registration and make a secure payment. Get instant confirmation on email.</p>
-        </div>
-        <div class="how-step">
-          <div class="how-num">3</div>
-          <h3>Attend Live / Learn</h3>
-          <p>Join live sessions or access recorded content. Interact with mentors and fellow learners.</p>
-        </div>
-        <div class="how-step">
-          <div class="how-num">4</div>
-          <h3>Get Certified</h3>
-          <p>Complete the workshop, clear the assessment and receive your verified TechEra certificate.</p>
-        </div>
+        <div class="how-step"><div class="how-n">1</div><h3>Choose a Workshop</h3><p>Browse categories and pick the workshop that fits your goal and schedule.</p></div>
+        <div class="how-step"><div class="how-n">2</div><h3>Register & Pay</h3><p>Complete your registration with secure payment. Get instant email confirmation.</p></div>
+        <div class="how-step"><div class="how-n">3</div><h3>Attend & Learn</h3><p>Join live sessions or watch recorded content anytime. Interact with expert mentors.</p></div>
+        <div class="how-step"><div class="how-n">4</div><h3>Get Certified</h3><p>Complete the workshop and receive your verified TechEra certificate.</p></div>
       </div>
     </div>
   </section>
 
   <!-- TESTIMONIALS -->
-  <section class="testimonials-section section-pad">
-    <div class="container text-center">
-      <div class="section-label" style="color:#4de0a0">Student Reviews</div>
-      <h2 class="section-title" style="color:white">Trusted by Students Worldwide</h2>
-      <p class="section-sub" style="color:rgba(255,255,255,0.6);margin:0 auto">Real results from real students across India, UK, Australia, Canada and more.</p>
-      <div class="test-grid">
-        <div class="test-card">
-          <div class="test-stars">★★★★★</div>
-          <p class="test-text">"The Python workshop was outstanding. I went from zero coding knowledge to building my first project in just 3 days. Best investment I've made!"</p>
-          <div class="test-author">
-            <div class="test-avatar" style="background:var(--green)">AP</div>
-            <div><div class="test-name">Arjun Patel</div><div class="test-role">Software Developer · Pune, India</div></div>
-          </div>
-        </div>
-        <div class="test-card">
-          <div class="test-stars">★★★★★</div>
-          <p class="test-text">"TechEra helped me with my MBA dissertation at the last minute. The quality was excellent, fully original and delivered ahead of deadline!"</p>
-          <div class="test-author">
-            <div class="test-avatar" style="background:var(--gold)">SM</div>
-            <div><div class="test-name">Sarah Mitchell</div><div class="test-role">MBA Student · London, UK</div></div>
-          </div>
-        </div>
-        <div class="test-card">
-          <div class="test-stars">★★★★★</div>
-          <p class="test-text">"The Digital Marketing workshop is world-class. I joined from Canada and landed my first freelance client within a month after completing it!"</p>
-          <div class="test-author">
-            <div class="test-avatar" style="background:var(--red)">RK</div>
-            <div><div class="test-name">Riya Kapoor</div><div class="test-role">Freelancer · Toronto, Canada</div></div>
-          </div>
-        </div>
-        <div class="test-card">
-          <div class="test-stars">★★★★★</div>
-          <p class="test-text">"Submitted my engineering project through TechEra. Complete, well-structured, and got an A grade. Their support team is super responsive!"</p>
-          <div class="test-author">
-            <div class="test-avatar" style="background:#1a55a0">MS</div>
-            <div><div class="test-name">Mohammed Al-Sayed</div><div class="test-role">B.Tech Student · Dubai, UAE</div></div>
-          </div>
-        </div>
-        <div class="test-card">
-          <div class="test-stars">★★★★★</div>
-          <p class="test-text">"The Graphic Design workshop transformed my career. The mentor feedback was detailed and the live projects made all the difference. Highly recommend!"</p>
-          <div class="test-author">
-            <div class="test-avatar" style="background:#7c3aed">PP</div>
-            <div><div class="test-name">Priya Pillai</div><div class="test-role">Designer · Bangalore, India</div></div>
-          </div>
-        </div>
-        <div class="test-card">
-          <div class="test-stars">★★★★★</div>
-          <p class="test-text">"Got my entire semester's case study solved professionally. TechEra is my go-to for assignment help — every single time. Absolute lifesaver!"</p>
-          <div class="test-author">
-            <div class="test-avatar" style="background:#0891b2">JW</div>
-            <div><div class="test-name">James Wilson</div><div class="test-role">Commerce Student · Melbourne, AU</div></div>
-          </div>
-        </div>
+  <section class="sec testi-bg">
+    <div class="wrap tc">
+      <div class="lbl" style="color:#4de0a0">Student Reviews</div>
+      <h2 class="h2" style="color:#fff">Trusted by Students Worldwide</h2>
+      <p class="sub" style="color:rgba(255,255,255,.6)">Real results from real students across India, UK, Australia, Canada and more.</p>
+      <div class="tg3">
+        <div class="tcard"><div class="t-stars">★★★★★</div><p class="t-text">"The Python workshop was outstanding. I went from zero coding knowledge to building my first real project in just 3 days. Best investment I've ever made!"</p><div class="t-author"><div class="t-ava" style="background:var(--g)">AP</div><div><div class="t-name">Arjun Patel</div><div class="t-role">Software Developer · Pune, India</div></div></div></div>
+        <div class="tcard"><div class="t-stars">★★★★★</div><p class="t-text">"TechEra helped me with my MBA dissertation at the last minute. The quality was excellent, fully original and delivered before my deadline. Lifesaver!"</p><div class="t-author"><div class="t-ava" style="background:var(--gold)">SM</div><div><div class="t-name">Sarah Mitchell</div><div class="t-role">MBA Student · London, UK</div></div></div></div>
+        <div class="tcard"><div class="t-stars">★★★★★</div><p class="t-text">"The Digital Marketing workshop is world-class. I joined from Canada and landed my first freelance client within a month of completing it. Amazing!"</p><div class="t-author"><div class="t-ava" style="background:var(--red)">RK</div><div><div class="t-name">Riya Kapoor</div><div class="t-role">Freelancer · Toronto, Canada</div></div></div></div>
+        <div class="tcard"><div class="t-stars">★★★★★</div><p class="t-text">"Got my engineering project done through TechEra — complete, well-structured and got an A grade. Their WhatsApp support is super fast and responsive!"</p><div class="t-author"><div class="t-ava" style="background:#1e40af">MA</div><div><div class="t-name">Mohammed Al-Sayed</div><div class="t-role">B.Tech Student · Dubai, UAE</div></div></div></div>
+        <div class="tcard"><div class="t-stars">★★★★★</div><p class="t-text">"The Graphic Design workshop truly changed my career path. The mentor feedback was detailed and the live projects made all the difference. Highly recommend!"</p><div class="t-author"><div class="t-ava" style="background:#7c3aed">PP</div><div><div class="t-name">Priya Pillai</div><div class="t-role">Designer · Bangalore, India</div></div></div></div>
+        <div class="tcard"><div class="t-stars">★★★★★</div><p class="t-text">"Got my entire semester's case studies solved professionally. TechEra is my go-to for assignment help every single time. Absolutely incredible service!"</p><div class="t-author"><div class="t-ava" style="background:#0891b2">JW</div><div><div class="t-name">James Wilson</div><div class="t-role">Commerce Student · Melbourne, AU</div></div></div></div>
       </div>
     </div>
   </section>
 
   <!-- CTA BAND -->
-  <section class="cta-band">
-    <div class="container">
+  <div class="cta-band">
+    <div class="wrap">
       <h2>Ready to Start Your Journey?</h2>
       <p>Join 50,000+ students who are already learning and leading with TechEra.</p>
       <div class="cta-btns">
-        <span class="cta-btn-white" onclick="showPage('workshops')" style="cursor:pointer">🎯 Browse Workshops</span>
-        <span class="cta-btn-outline" onclick="showPage('assignments')" style="cursor:pointer">📝 Submit Assignment</span>
+        <span class="cta-w" onclick="go('workshops')">🎯 Browse Workshops</span>
+        <span class="cta-o" onclick="go('assignments')">📝 Submit Assignment</span>
       </div>
     </div>
-  </section>
+  </div>
 
-</div><!-- end home page -->
+</div><!-- /home -->
 
-<!-- ============================================================
+<!-- =====================================================
      PAGE: WORKSHOPS
-     ============================================================ -->
+     ===================================================== -->
 <div class="page" id="page-workshops">
 
-  <section class="page-hero-section">
-    <div class="container">
+  <div class="ph">
+    <div class="wrap">
       <h1>🎯 Paid Workshops</h1>
-      <p>Expert-led, hands-on workshops in Programming, Digital Marketing, Creative Design & Visual Arts. Enroll and get certified.</p>
+      <p>Expert-led, hands-on workshops in Programming, Digital Marketing, Creative Design & Visual Arts. Enroll. Learn. Get Certified.</p>
     </div>
-  </section>
+  </div>
 
-  <!-- Categories strip -->
-  <section style="background:var(--off-white);padding:40px 0;border-bottom:1px solid var(--gray-line);">
-    <div class="container">
-      <div class="wcat-grid" style="margin-top:0">
-        <div class="wcat-card" onclick="filterWorkshops('programming')">
-          <div class="wcat-icon">💻</div><h3>Programming</h3><p>Python, Web Dev, App Dev, Cloud</p><div class="wcat-count">12 Workshops</div>
-        </div>
-        <div class="wcat-card" onclick="filterWorkshops('marketing')">
-          <div class="wcat-icon">📱</div><h3>Digital Marketing</h3><p>SEO, Social, Ads, Analytics</p><div class="wcat-count">8 Workshops</div>
-        </div>
-        <div class="wcat-card" onclick="filterWorkshops('creative')">
-          <div class="wcat-icon">🎨</div><h3>Creative Design</h3><p>Graphic, UI/UX, Motion, Branding</p><div class="wcat-count">10 Workshops</div>
-        </div>
-        <div class="wcat-card" onclick="filterWorkshops('visual')">
-          <div class="wcat-icon">🎬</div><h3>Visual Arts</h3><p>Photography, Video, Filmmaking</p><div class="wcat-count">7 Workshops</div>
-        </div>
+  <!-- Category Quick-Nav -->
+  <section style="background:var(--bg);padding:40px 0;border-bottom:1px solid var(--bd)">
+    <div class="wrap">
+      <div class="cats-grid" style="margin-top:0">
+        <div class="ccat" onclick="scrollToId('sec-prog')"><div class="ccat-ico">💻</div><h3>Programming</h3><p>Python, Web Dev, App Dev, Cloud</p><div class="ccat-count">12 Workshops</div></div>
+        <div class="ccat" onclick="scrollToId('sec-mktg')"><div class="ccat-ico">📱</div><h3>Digital Marketing</h3><p>SEO, Social, Ads, Analytics</p><div class="ccat-count">8 Workshops</div></div>
+        <div class="ccat" onclick="scrollToId('sec-design')"><div class="ccat-ico">🎨</div><h3>Creative Design</h3><p>Graphic, UI/UX, Motion, Branding</p><div class="ccat-count">10 Workshops</div></div>
+        <div class="ccat" onclick="scrollToId('sec-visual')"><div class="ccat-ico">🎬</div><h3>Visual Arts</h3><p>Photography, Video, Filmmaking</p><div class="ccat-count">7 Workshops</div></div>
       </div>
     </div>
   </section>
 
-  <section class="section-pad">
-    <div class="container">
-      <div class="filter-bar">
-        <button class="fb-btn active" onclick="filterActive(this,'wb')">All Workshops</button>
-        <button class="fb-btn" onclick="filterActive(this,'wb')">Programming</button>
-        <button class="fb-btn" onclick="filterActive(this,'wb')">Digital Marketing</button>
-        <button class="fb-btn" onclick="filterActive(this,'wb')">Creative Design</button>
-        <button class="fb-btn" onclick="filterActive(this,'wb')">Visual Arts</button>
-        <button class="fb-btn" onclick="filterActive(this,'wb')">Live</button>
-        <button class="fb-btn" onclick="filterActive(this,'wb')">Recorded</button>
+  <section class="sec" style="background:#fff" id="sec-prog">
+    <div class="wrap">
+      <!-- LIVE WORKSHOPS -->
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap">
+        <h2 class="h2" style="margin-bottom:0">Upcoming Live Workshops</h2>
+        <span style="background:var(--red);color:#fff;font-size:11px;font-weight:800;padding:5px 12px;border-radius:6px;display:flex;align-items:center;gap:5px"><span style="width:6px;height:6px;border-radius:50%;background:#fff;animation:blink 1.2s infinite;display:inline-block"></span>LIVE SOON</span>
       </div>
+      <div class="g2" style="margin-bottom:56px">
 
-      <!-- Live Workshops -->
-      <h3 style="font-size:20px;font-weight:800;color:var(--navy);margin-bottom:20px;display:flex;align-items:center;gap:10px;">
-        <span style="background:var(--red);color:white;font-size:11px;font-weight:800;padding:5px 11px;border-radius:6px;display:flex;align-items:center;gap:5px;"><span style="width:6px;height:6px;border-radius:50%;background:white;animation:blink 1.2s infinite;display:inline-block"></span>LIVE NOW</span>
-        Upcoming Live Workshops
-      </h3>
-      <div class="cards-grid-2" style="margin-bottom:48px">
-        <div class="workshop-card">
-          <div class="wc-header">
-            <div class="wc-live-badge">LIVE</div>
+        <div class="wcard">
+          <div class="wc-head">
+            <div class="live-badge">LIVE</div>
             <h3>Python for Beginners — Complete Bootcamp</h3>
-            <p>3-day intensive live workshop. Learn Python from scratch — variables, loops, functions, file handling and build 3 real projects with mentor guidance.</p>
-            <div class="wc-tags">
-              <span class="badge badge-green">Programming</span>
-              <span class="badge badge-navy">3 Days</span>
-              <span class="badge badge-blue">Beginner</span>
-              <span class="badge badge-gold">Certificate</span>
-            </div>
+            <p>3-day intensive live workshop. Learn Python from scratch — variables, loops, functions, file handling. Build 3 real projects with mentor guidance and live Q&A.</p>
+            <div class="wc-tags"><span class="tag tg">Programming</span><span class="tag tn">3 Days</span><span class="tag tb">Beginner</span><span class="tag to">Certificate</span></div>
           </div>
-          <div class="wc-footer">
-            <div class="wc-date-info">
-              <strong>May 10–12, 2025</strong>
-              <span>10 AM – 5 PM IST · Online · ₹999</span>
-            </div>
-            <button class="wc-register-btn" onclick="showToast('✅ Registered for Python Bootcamp! Check your email.')">Register Now</button>
+          <div class="wc-foot">
+            <div class="wc-date"><strong>May 10–12, 2025</strong><span>10 AM – 5 PM IST · Online · ₹999</span></div>
+            <button class="wreg" onclick="toast('✅ Registered for Python Bootcamp! Check your email.')">Register Now</button>
           </div>
         </div>
-        <div class="workshop-card">
-          <div class="wc-header">
-            <div class="wc-live-badge">LIVE</div>
+
+        <div class="wcard">
+          <div class="wc-head">
+            <div class="live-badge">LIVE</div>
             <h3>Digital Marketing Masterclass — Full Course</h3>
-            <p>2-day power-packed live workshop covering SEO, Google Ads, Instagram & Facebook Marketing, Email Campaigns and Analytics with real case studies.</p>
-            <div class="wc-tags">
-              <span class="badge badge-green">Marketing</span>
-              <span class="badge badge-navy">2 Days</span>
-              <span class="badge badge-blue">All Levels</span>
-              <span class="badge badge-gold">Certificate</span>
-            </div>
+            <p>2-day power-packed live workshop covering SEO, Google Ads, Instagram & Facebook Marketing, Email Campaigns and Analytics with real-world case studies.</p>
+            <div class="wc-tags"><span class="tag tg">Marketing</span><span class="tag tn">2 Days</span><span class="tag tb">All Levels</span><span class="tag to">Certificate</span></div>
           </div>
-          <div class="wc-footer">
-            <div class="wc-date-info">
-              <strong>May 15–16, 2025</strong>
-              <span>11 AM – 6 PM IST · Online · ₹799</span>
-            </div>
-            <button class="wc-register-btn" onclick="showToast('✅ Registered for Digital Marketing Masterclass!')">Register Now</button>
+          <div class="wc-foot">
+            <div class="wc-date"><strong>May 15–16, 2025</strong><span>11 AM – 6 PM IST · Online · ₹799</span></div>
+            <button class="wreg" onclick="toast('✅ Registered for Digital Marketing Masterclass!')">Register Now</button>
           </div>
         </div>
-        <div class="workshop-card">
-          <div class="wc-header">
+
+        <div class="wcard">
+          <div class="wc-head">
             <h3>Graphic Design from Zero to Pro</h3>
-            <p>5-day creative workshop. Master Canva, Adobe Photoshop & Illustrator. Create logos, social media posts, brand kits and design portfolios.</p>
-            <div class="wc-tags">
-              <span class="badge badge-green">Creative Design</span>
-              <span class="badge badge-navy">5 Days</span>
-              <span class="badge badge-blue">Beginner</span>
-              <span class="badge badge-gold">Certificate</span>
-            </div>
+            <p>5-day creative workshop. Master Canva, Adobe Photoshop & Illustrator. Create logos, social media posts, brand kits and build your design portfolio.</p>
+            <div class="wc-tags"><span class="tag tg">Creative Design</span><span class="tag tn">5 Days</span><span class="tag tb">Beginner</span><span class="tag to">Certificate</span></div>
           </div>
-          <div class="wc-footer">
-            <div class="wc-date-info">
-              <strong>May 19–23, 2025</strong>
-              <span>10 AM – 4 PM IST · Online · ₹1,199</span>
-            </div>
-            <button class="wc-register-btn" onclick="showToast('✅ Registered for Graphic Design Workshop!')">Register Now</button>
+          <div class="wc-foot">
+            <div class="wc-date"><strong>May 19–23, 2025</strong><span>10 AM – 4 PM IST · Online · ₹1,199</span></div>
+            <button class="wreg" onclick="toast('✅ Registered for Graphic Design Workshop!')">Register Now</button>
           </div>
         </div>
-        <div class="workshop-card">
-          <div class="wc-header">
-            <div class="wc-live-badge">LIVE</div>
+
+        <div class="wcard">
+          <div class="wc-head">
+            <div class="live-badge">LIVE</div>
             <h3>Video Editing & YouTube Content Creation</h3>
-            <p>Learn CapCut, Premiere Pro & DaVinci Resolve. Create YouTube-ready videos, Reels, short films and monetize your content channel.</p>
-            <div class="wc-tags">
-              <span class="badge badge-green">Visual Arts</span>
-              <span class="badge badge-navy">3 Days</span>
-              <span class="badge badge-blue">Intermediate</span>
-              <span class="badge badge-gold">Certificate</span>
-            </div>
+            <p>Learn CapCut, Premiere Pro & DaVinci Resolve. Create YouTube-ready videos, Reels, short films and learn how to monetize your content channel.</p>
+            <div class="wc-tags"><span class="tag tg">Visual Arts</span><span class="tag tn">3 Days</span><span class="tag tb">Intermediate</span><span class="tag to">Certificate</span></div>
           </div>
-          <div class="wc-footer">
-            <div class="wc-date-info">
-              <strong>May 24–26, 2025</strong>
-              <span>2 PM – 7 PM IST · Online · ₹899</span>
-            </div>
-            <button class="wc-register-btn" onclick="showToast('✅ Registered for Video Editing Workshop!')">Register Now</button>
+          <div class="wc-foot">
+            <div class="wc-date"><strong>May 24–26, 2025</strong><span>2 PM – 7 PM IST · Online · ₹899</span></div>
+            <button class="wreg" onclick="toast('✅ Registered for Video Editing Workshop!')">Register Now</button>
           </div>
         </div>
+
       </div>
 
-      <!-- Recorded / Self-paced Workshops -->
-      <h3 style="font-size:20px;font-weight:800;color:var(--navy);margin-bottom:20px;">📹 Recorded Workshops — Learn at Your Own Pace</h3>
-      <div class="cards-grid-3">
-        <div class="course-card">
-          <div class="cc-thumb" style="background:#e8f0ff">⚛️
-            <div class="cc-badges"><span class="badge badge-navy">Recorded</span></div>
-          </div>
-          <div class="cc-body">
-            <div class="cc-cat">Programming</div>
+      <!-- RECORDED WORKSHOPS -->
+      <h2 class="h2" style="margin-bottom:8px">📹 Recorded Workshops — Learn at Your Own Pace</h2>
+      <p style="font-size:16px;color:var(--mt);margin-bottom:28px">Buy once. Watch forever. Certificate included.</p>
+
+      <div class="fbar">
+        <button class="fb on" onclick="filterBtn(this)">All</button>
+        <button class="fb" onclick="filterBtn(this)">Programming</button>
+        <button class="fb" onclick="filterBtn(this)">Marketing</button>
+        <button class="fb" onclick="filterBtn(this)">Creative Design</button>
+        <button class="fb" onclick="filterBtn(this)">Visual Arts</button>
+      </div>
+
+      <div class="g3">
+        <div class="ccard">
+          <div class="cthumb" style="background:#e8f0ff">⚛️<div class="cbadges"><span class="tag tn">Recorded</span><span class="tag tg">Bestseller</span></div></div>
+          <div class="cbody">
+            <div class="ccat2">Programming</div>
             <h3>Full Stack Web Development — React & Node.js</h3>
-            <div class="cc-meta"><span class="cc-rating">★ 4.9</span><span>· 60 hrs</span><span>· 3,200 enrolled</span></div>
-            <div class="cc-instructor">By TechEra Expert Faculty</div>
-            <div class="cc-footer">
-              <div><span class="cc-price">₹1,499</span><span class="cc-price-orig">₹5,999</span></div>
-              <button class="cc-btn" onclick="showToast('✅ Enrolled in Full Stack Workshop!')">Enroll Now</button>
-            </div>
+            <div class="cmeta"><span class="star">★ 4.9</span><span>· 60 hrs</span><span>· 3,200 enrolled</span></div>
+            <div class="cfoot"><div><span class="cprice">₹1,499</span><span class="cpold">₹5,999</span></div><button class="ccbtn" onclick="toast('✅ Enrolled in Full Stack Workshop!')">Enroll Now</button></div>
           </div>
         </div>
-        <div class="course-card">
-          <div class="cc-thumb" style="background:#e8f8f0">🐍
-            <div class="cc-badges"><span class="badge badge-navy">Recorded</span></div>
-          </div>
-          <div class="cc-body">
-            <div class="cc-cat">Programming</div>
+        <div class="ccard">
+          <div class="cthumb" style="background:#e8f8f0">🐍<div class="cbadges"><span class="tag tn">Recorded</span></div></div>
+          <div class="cbody">
+            <div class="ccat2">Programming</div>
             <h3>Data Science & Machine Learning with Python</h3>
-            <div class="cc-meta"><span class="cc-rating">★ 4.9</span><span>· 45 hrs</span><span>· 5,100 enrolled</span></div>
-            <div class="cc-instructor">By TechEra Expert Faculty</div>
-            <div class="cc-footer">
-              <div><span class="cc-price">₹1,299</span><span class="cc-price-orig">₹4,999</span></div>
-              <button class="cc-btn" onclick="showToast('✅ Enrolled in Data Science Workshop!')">Enroll Now</button>
-            </div>
+            <div class="cmeta"><span class="star">★ 4.9</span><span>· 45 hrs</span><span>· 5,100 enrolled</span></div>
+            <div class="cfoot"><div><span class="cprice">₹1,299</span><span class="cpold">₹4,999</span></div><button class="ccbtn" onclick="toast('✅ Enrolled in Data Science Workshop!')">Enroll Now</button></div>
           </div>
         </div>
-        <div class="course-card">
-          <div class="cc-thumb" style="background:#fff4e6">📸
-            <div class="cc-badges"><span class="badge badge-navy">Recorded</span></div>
-          </div>
-          <div class="cc-body">
-            <div class="cc-cat">Visual Arts</div>
-            <h3>Photography Mastery — From Beginner to Professional</h3>
-            <div class="cc-meta"><span class="cc-rating">★ 4.8</span><span>· 22 hrs</span><span>· 1,800 enrolled</span></div>
-            <div class="cc-instructor">By TechEra Creative Faculty</div>
-            <div class="cc-footer">
-              <div><span class="cc-price">₹699</span><span class="cc-price-orig">₹2,999</span></div>
-              <button class="cc-btn" onclick="showToast('✅ Enrolled in Photography Workshop!')">Enroll Now</button>
-            </div>
+        <div class="ccard">
+          <div class="cthumb" style="background:#fff4e6">📸<div class="cbadges"><span class="tag tn">Recorded</span></div></div>
+          <div class="cbody">
+            <div class="ccat2">Visual Arts</div>
+            <h3>Photography Mastery — Beginner to Professional</h3>
+            <div class="cmeta"><span class="star">★ 4.8</span><span>· 22 hrs</span><span>· 1,800 enrolled</span></div>
+            <div class="cfoot"><div><span class="cprice">₹699</span><span class="cpold">₹2,999</span></div><button class="ccbtn" onclick="toast('✅ Enrolled in Photography Workshop!')">Enroll Now</button></div>
           </div>
         </div>
-        <div class="course-card">
-          <div class="cc-thumb" style="background:#ffeef0">🎯
-            <div class="cc-badges"><span class="badge badge-navy">Recorded</span></div>
-          </div>
-          <div class="cc-body">
-            <div class="cc-cat">Digital Marketing</div>
+        <div class="ccard">
+          <div class="cthumb" style="background:#ffeef0">🎯<div class="cbadges"><span class="tag tn">Recorded</span></div></div>
+          <div class="cbody">
+            <div class="ccat2">Digital Marketing</div>
             <h3>SEO Masterclass — Rank #1 on Google in 30 Days</h3>
-            <div class="cc-meta"><span class="cc-rating">★ 4.7</span><span>· 18 hrs</span><span>· 2,400 enrolled</span></div>
-            <div class="cc-instructor">By TechEra Marketing Faculty</div>
-            <div class="cc-footer">
-              <div><span class="cc-price">₹799</span><span class="cc-price-orig">₹3,499</span></div>
-              <button class="cc-btn" onclick="showToast('✅ Enrolled in SEO Masterclass!')">Enroll Now</button>
-            </div>
+            <div class="cmeta"><span class="star">★ 4.7</span><span>· 18 hrs</span><span>· 2,400 enrolled</span></div>
+            <div class="cfoot"><div><span class="cprice">₹799</span><span class="cpold">₹3,499</span></div><button class="ccbtn" onclick="toast('✅ Enrolled in SEO Masterclass!')">Enroll Now</button></div>
           </div>
         </div>
-        <div class="course-card">
-          <div class="cc-thumb" style="background:#f0e8ff">🎨
-            <div class="cc-badges"><span class="badge badge-navy">Recorded</span></div>
-          </div>
-          <div class="cc-body">
-            <div class="cc-cat">Creative Design</div>
-            <h3>UI/UX Design — Build Apps People Love</h3>
-            <div class="cc-meta"><span class="cc-rating">★ 4.8</span><span>· 30 hrs</span><span>· 2,900 enrolled</span></div>
-            <div class="cc-instructor">By TechEra Design Faculty</div>
-            <div class="cc-footer">
-              <div><span class="cc-price">₹1,099</span><span class="cc-price-orig">₹4,299</span></div>
-              <button class="cc-btn" onclick="showToast('✅ Enrolled in UI/UX Workshop!')">Enroll Now</button>
-            </div>
+        <div class="ccard">
+          <div class="cthumb" style="background:#f0e8ff">🎨<div class="cbadges"><span class="tag tn">Recorded</span><span class="tag tg">Popular</span></div></div>
+          <div class="cbody">
+            <div class="ccat2">Creative Design</div>
+            <h3>UI/UX Design Masterclass — Build Apps People Love</h3>
+            <div class="cmeta"><span class="star">★ 4.8</span><span>· 30 hrs</span><span>· 2,900 enrolled</span></div>
+            <div class="cfoot"><div><span class="cprice">₹1,099</span><span class="cpold">₹4,299</span></div><button class="ccbtn" onclick="toast('✅ Enrolled in UI/UX Workshop!')">Enroll Now</button></div>
           </div>
         </div>
-        <div class="course-card">
-          <div class="cc-thumb" style="background:#e8f8f8">☁️
-            <div class="cc-badges"><span class="badge badge-navy">Recorded</span></div>
-          </div>
-          <div class="cc-body">
-            <div class="cc-cat">Programming</div>
+        <div class="ccard">
+          <div class="cthumb" style="background:#e8f8f8">☁️<div class="cbadges"><span class="tag tn">Recorded</span></div></div>
+          <div class="cbody">
+            <div class="ccat2">Programming</div>
             <h3>AWS Cloud & DevOps — Zero to Certified</h3>
-            <div class="cc-meta"><span class="cc-rating">★ 4.9</span><span>· 38 hrs</span><span>· 1,600 enrolled</span></div>
-            <div class="cc-instructor">By TechEra Tech Faculty</div>
-            <div class="cc-footer">
-              <div><span class="cc-price">₹1,799</span><span class="cc-price-orig">₹6,999</span></div>
-              <button class="cc-btn" onclick="showToast('✅ Enrolled in AWS Workshop!')">Enroll Now</button>
-            </div>
+            <div class="cmeta"><span class="star">★ 4.9</span><span>· 38 hrs</span><span>· 1,600 enrolled</span></div>
+            <div class="cfoot"><div><span class="cprice">₹1,799</span><span class="cpold">₹6,999</span></div><button class="ccbtn" onclick="toast('✅ Enrolled in AWS Workshop!')">Enroll Now</button></div>
+          </div>
+        </div>
+        <div class="ccard">
+          <div class="cthumb" style="background:#fff0fb">🎵<div class="cbadges"><span class="tag tn">Recorded</span></div></div>
+          <div class="cbody">
+            <div class="ccat2">Creative Design</div>
+            <h3>Motion Graphics & After Effects from Scratch</h3>
+            <div class="cmeta"><span class="star">★ 4.7</span><span>· 25 hrs</span><span>· 1,200 enrolled</span></div>
+            <div class="cfoot"><div><span class="cprice">₹999</span><span class="cpold">₹3,999</span></div><button class="ccbtn" onclick="toast('✅ Enrolled in Motion Graphics Workshop!')">Enroll Now</button></div>
+          </div>
+        </div>
+        <div class="ccard">
+          <div class="cthumb" style="background:#e8f0ff">📲<div class="cbadges"><span class="tag tn">Recorded</span></div></div>
+          <div class="cbody">
+            <div class="ccat2">Digital Marketing</div>
+            <h3>Social Media Marketing — Instagram, Facebook & LinkedIn</h3>
+            <div class="cmeta"><span class="star">★ 4.8</span><span>· 16 hrs</span><span>· 3,100 enrolled</span></div>
+            <div class="cfoot"><div><span class="cprice">₹699</span><span class="cpold">₹2,499</span></div><button class="ccbtn" onclick="toast('✅ Enrolled in Social Media Workshop!')">Enroll Now</button></div>
+          </div>
+        </div>
+        <div class="ccard">
+          <div class="cthumb" style="background:#fff4e6">🎥<div class="cbadges"><span class="tag tn">Recorded</span></div></div>
+          <div class="cbody">
+            <div class="ccat2">Visual Arts</div>
+            <h3>Filmmaking & Short Film Production — Full Course</h3>
+            <div class="cmeta"><span class="star">★ 4.7</span><span>· 20 hrs</span><span>· 900 enrolled</span></div>
+            <div class="cfoot"><div><span class="cprice">₹799</span><span class="cpold">₹3,499</span></div><button class="ccbtn" onclick="toast('✅ Enrolled in Filmmaking Workshop!')">Enroll Now</button></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="cta-band">
-    <div class="container">
-      <h2>Not Sure Which Workshop?</h2>
-      <p>Our counsellors will guide you to the right workshop for your goals and budget.</p>
+  <div class="cta-band">
+    <div class="wrap">
+      <h2>Not Sure Which Workshop to Choose?</h2>
+      <p>Our counsellors will guide you to the right workshop for your goals and budget — for free.</p>
       <div class="cta-btns">
-        <span class="cta-btn-white" onclick="showPage('contact')" style="cursor:pointer">💬 Talk to a Counsellor</span>
+        <span class="cta-w" onclick="go('contact')">💬 Talk to a Counsellor</span>
+        <span class="cta-o" onclick="toast('Opening WhatsApp... 💬')">📞 WhatsApp Us</span>
       </div>
     </div>
-  </section>
+  </div>
 
-</div><!-- end workshops page -->
+</div><!-- /workshops -->
 
-<!-- ============================================================
+<!-- =====================================================
      PAGE: ASSIGNMENTS
-     ============================================================ -->
+     ===================================================== -->
 <div class="page" id="page-assignments">
 
-  <section class="page-hero-section">
-    <div class="container">
+  <div class="ph">
+    <div class="wrap">
       <h1>📝 Assignment & Project Help</h1>
       <p>One-stop worldwide solution for all college assignments, university projects, MBA case studies, research papers and more. 100% original. On-time delivery.</p>
     </div>
-  </section>
+  </div>
 
-  <section class="section-pad">
-    <div class="container">
+  <section class="sec" style="background:#fff">
+    <div class="wrap">
 
-      <!-- USP strip -->
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:56px;">
-        <div style="background:var(--green-light);border-radius:var(--radius);padding:20px;text-align:center;border:1.5px solid rgba(34,196,122,0.25);">
-          <div style="font-size:28px;margin-bottom:8px;">✅</div>
-          <div style="font-weight:700;color:var(--navy);font-size:15px;">100% Original</div>
-          <div style="font-size:13px;color:var(--gray-text);margin-top:4px;">Plagiarism-free guaranteed</div>
-        </div>
-        <div style="background:#e8f0ff;border-radius:var(--radius);padding:20px;text-align:center;border:1.5px solid rgba(26,85,160,0.2);">
-          <div style="font-size:28px;margin-bottom:8px;">⚡</div>
-          <div style="font-weight:700;color:var(--navy);font-size:15px;">On-Time Delivery</div>
-          <div style="font-size:13px;color:var(--gray-text);margin-top:4px;">Always before your deadline</div>
-        </div>
-        <div style="background:#fff4e6;border-radius:var(--radius);padding:20px;text-align:center;border:1.5px solid rgba(240,165,0,0.2);">
-          <div style="font-size:28px;margin-bottom:8px;">🌍</div>
-          <div style="font-weight:700;color:var(--navy);font-size:15px;">Worldwide Service</div>
-          <div style="font-size:13px;color:var(--gray-text);margin-top:4px;">40+ countries served</div>
-        </div>
-        <div style="background:#ffeaea;border-radius:var(--radius);padding:20px;text-align:center;border:1.5px solid rgba(224,53,53,0.15);">
-          <div style="font-size:28px;margin-bottom:8px;">🔒</div>
-          <div style="font-weight:700;color:var(--navy);font-size:15px;">100% Confidential</div>
-          <div style="font-size:13px;color:var(--gray-text);margin-top:4px;">Your data stays private</div>
-        </div>
+      <!-- USP Row -->
+      <div class="usp-row">
+        <div class="usp"><div class="usp-ico">✅</div><h4>100% Original</h4><p>Plagiarism-free guaranteed with report</p></div>
+        <div class="usp"><div class="usp-ico">⚡</div><h4>On-Time Delivery</h4><p>Always delivered before your deadline</p></div>
+        <div class="usp"><div class="usp-ico">🌍</div><h4>Worldwide Service</h4><p>40+ countries — all time zones</p></div>
+        <div class="usp"><div class="usp-ico">🔒</div><h4>100% Confidential</h4><p>Your data is completely private</p></div>
       </div>
 
-      <div class="section-label">Our Services</div>
-      <h2 class="section-title">We Handle Every Type of Assignment</h2>
-      <p class="section-sub">From undergraduate essays to PhD dissertations — we cover it all with expert writers and domain specialists.</p>
+      <div class="lbl">Our Services</div>
+      <h2 class="h2">We Handle Every Type of Assignment</h2>
+      <p class="sub">From undergraduate essays to PhD dissertations — we cover every subject with expert writers and domain specialists.</p>
 
-      <div class="cards-grid-3" style="margin-top:36px">
-        <div class="assign-card">
-          <div class="assign-icon-wrap" style="background:#e8f8f0">📝</div>
-          <h3>MBA & Management Assignments</h3>
-          <p>Business plans, strategic analysis, marketing plans, HR reports, financial case studies and all MBA project requirements handled by expert professionals.</p>
-          <div class="assign-tags">
-            <span class="badge badge-green">MBA</span>
-            <span class="badge badge-blue">Case Study</span>
-            <span class="badge badge-gold">Finance</span>
-          </div>
-          <div class="assign-footer">
-            <div><div class="assign-price-label">Starting from</div><div class="assign-price-val">₹999</div></div>
-            <button class="submit-project-btn" onclick="showPage('contact')">Submit Now</button>
-          </div>
-        </div>
-        <div class="assign-card">
-          <div class="assign-icon-wrap" style="background:#e8f0ff">💻</div>
-          <h3>Programming & Engineering Projects</h3>
-          <p>Python, Java, C++, Data Structures, Algorithms, Web Development, Android/iOS apps and all software engineering assignments with full source code.</p>
-          <div class="assign-tags">
-            <span class="badge badge-green">Python</span>
-            <span class="badge badge-blue">Java / C++</span>
-            <span class="badge badge-navy">Web Dev</span>
-          </div>
-          <div class="assign-footer">
-            <div><div class="assign-price-label">Starting from</div><div class="assign-price-val">₹599</div></div>
-            <button class="submit-project-btn" onclick="showPage('contact')">Submit Now</button>
-          </div>
-        </div>
-        <div class="assign-card">
-          <div class="assign-icon-wrap" style="background:#ffeef0">🔬</div>
-          <h3>Research Papers & Dissertations</h3>
-          <p>PhD dissertations, master's theses, literature reviews, systematic reviews, research proposals and academic papers with proper citations (APA, MLA, Harvard).</p>
-          <div class="assign-tags">
-            <span class="badge badge-green">PhD</span>
-            <span class="badge badge-blue">Thesis</span>
-            <span class="badge badge-gold">Research</span>
-          </div>
-          <div class="assign-footer">
-            <div><div class="assign-price-label">Starting from</div><div class="assign-price-val">₹1,999</div></div>
-            <button class="submit-project-btn" onclick="showPage('contact')">Submit Now</button>
-          </div>
-        </div>
-        <div class="assign-card">
-          <div class="assign-icon-wrap" style="background:#fff4e6">📊</div>
-          <h3>Data Analysis & Statistics Projects</h3>
-          <p>SPSS, R Studio, Python analysis, Excel dashboards, statistical modeling, regression analysis and complete data reports with charts and interpretation.</p>
-          <div class="assign-tags">
-            <span class="badge badge-green">SPSS</span>
-            <span class="badge badge-blue">R Studio</span>
-            <span class="badge badge-navy">Excel / Python</span>
-          </div>
-          <div class="assign-footer">
-            <div><div class="assign-price-label">Starting from</div><div class="assign-price-val">₹799</div></div>
-            <button class="submit-project-btn" onclick="showPage('contact')">Submit Now</button>
-          </div>
-        </div>
-        <div class="assign-card">
-          <div class="assign-icon-wrap" style="background:#f0e8ff">📋</div>
-          <h3>Business Case Studies & Reports</h3>
-          <p>SWOT analysis, Porter's Five Forces, business model canvas, market research reports, competitor analysis and all types of business strategy assignments.</p>
-          <div class="assign-tags">
-            <span class="badge badge-green">Strategy</span>
-            <span class="badge badge-blue">Market Research</span>
-            <span class="badge badge-gold">Reports</span>
-          </div>
-          <div class="assign-footer">
-            <div><div class="assign-price-label">Starting from</div><div class="assign-price-val">₹699</div></div>
-            <button class="submit-project-btn" onclick="showPage('contact')">Submit Now</button>
-          </div>
-        </div>
-        <div class="assign-card">
-          <div class="assign-icon-wrap" style="background:#e8f8f8">🎨</div>
-          <h3>Design & Creative Assignments</h3>
-          <p>UI/UX design projects, graphic design assignments, brand identity projects, logo creation, poster design and all creative arts college assignments.</p>
-          <div class="assign-tags">
-            <span class="badge badge-green">UI/UX</span>
-            <span class="badge badge-blue">Graphic Design</span>
-            <span class="badge badge-navy">Branding</span>
-          </div>
-          <div class="assign-footer">
-            <div><div class="assign-price-label">Starting from</div><div class="assign-price-val">₹499</div></div>
-            <button class="submit-project-btn" onclick="showPage('contact')">Submit Now</button>
-          </div>
-        </div>
-        <div class="assign-card">
-          <div class="assign-icon-wrap" style="background:#e8f0ff">📚</div>
-          <h3>Essay Writing & Academic Papers</h3>
-          <p>Descriptive essays, argumentative essays, reflective journals, book reviews, annotated bibliographies and all types of undergraduate academic writing.</p>
-          <div class="assign-tags">
-            <span class="badge badge-green">Essays</span>
-            <span class="badge badge-blue">Academic Writing</span>
-            <span class="badge badge-gold">All Formats</span>
-          </div>
-          <div class="assign-footer">
-            <div><div class="assign-price-label">Starting from</div><div class="assign-price-val">₹449</div></div>
-            <button class="submit-project-btn" onclick="showPage('contact')">Submit Now</button>
-          </div>
-        </div>
-        <div class="assign-card">
-          <div class="assign-icon-wrap" style="background:#fff4e6">🏥</div>
-          <h3>Nursing & Healthcare Assignments</h3>
-          <p>Nursing case studies, healthcare management reports, pharmacology assignments, patient care plans and all medical & health science college projects.</p>
-          <div class="assign-tags">
-            <span class="badge badge-green">Nursing</span>
-            <span class="badge badge-blue">Healthcare</span>
-            <span class="badge badge-navy">Medical</span>
-          </div>
-          <div class="assign-footer">
-            <div><div class="assign-price-label">Starting from</div><div class="assign-price-val">₹799</div></div>
-            <button class="submit-project-btn" onclick="showPage('contact')">Submit Now</button>
-          </div>
-        </div>
-        <div class="assign-card">
-          <div class="assign-icon-wrap" style="background:#ffeef0">⚖️</div>
-          <h3>Law & Legal Studies Assignments</h3>
-          <p>Legal case briefs, contract law essays, corporate law reports, constitutional law studies, moot court preparations and all LLB/LLM assignments.</p>
-          <div class="assign-tags">
-            <span class="badge badge-green">Law</span>
-            <span class="badge badge-blue">Legal Studies</span>
-            <span class="badge badge-gold">LLB / LLM</span>
-          </div>
-          <div class="assign-footer">
-            <div><div class="assign-price-label">Starting from</div><div class="assign-price-val">₹899</div></div>
-            <button class="submit-project-btn" onclick="showPage('contact')">Submit Now</button>
-          </div>
-        </div>
+      <div class="g3" style="margin-top:32px">
+        <div class="acard"><div class="acard-ico" style="background:#e8f8f0">📝</div><h3>MBA & Management Assignments</h3><p>Business plans, strategic analysis, marketing plans, HR reports, financial case studies and all MBA project requirements handled by experts.</p><div class="atags"><span class="tag tg">MBA</span><span class="tag tb">Case Study</span><span class="tag to">Finance</span></div><div class="afoot"><div><div class="ap-lbl">Starting from</div><div class="ap-val">₹999</div></div><button class="asubmit" onclick="go('contact')">Submit Now</button></div></div>
+
+        <div class="acard"><div class="acard-ico" style="background:#e8f0ff">💻</div><h3>Programming & Engineering Projects</h3><p>Python, Java, C++, Data Structures, Algorithms, Web Development, Android/iOS apps and all software engineering assignments with full source code.</p><div class="atags"><span class="tag tg">Python</span><span class="tag tb">Java / C++</span><span class="tag tn">Web Dev</span></div><div class="afoot"><div><div class="ap-lbl">Starting from</div><div class="ap-val">₹599</div></div><button class="asubmit" onclick="go('contact')">Submit Now</button></div></div>
+
+        <div class="acard"><div class="acard-ico" style="background:#ffeef0">🔬</div><h3>Research Papers & Dissertations</h3><p>PhD dissertations, master's theses, literature reviews, systematic reviews, research proposals and academic papers with proper citations (APA, MLA, Harvard).</p><div class="atags"><span class="tag tg">PhD</span><span class="tag tb">Thesis</span><span class="tag to">Research</span></div><div class="afoot"><div><div class="ap-lbl">Starting from</div><div class="ap-val">₹1,999</div></div><button class="asubmit" onclick="go('contact')">Submit Now</button></div></div>
+
+        <div class="acard"><div class="acard-ico" style="background:#fff4e6">📊</div><h3>Data Analysis & Statistics Projects</h3><p>SPSS, R Studio, Python analysis, Excel dashboards, statistical modeling, regression analysis and complete data reports with charts and interpretation.</p><div class="atags"><span class="tag tg">SPSS</span><span class="tag tb">R Studio</span><span class="tag tn">Excel</span></div><div class="afoot"><div><div class="ap-lbl">Starting from</div><div class="ap-val">₹799</div></div><button class="asubmit" onclick="go('contact')">Submit Now</button></div></div>
+
+        <div class="acard"><div class="acard-ico" style="background:#f0e8ff">📋</div><h3>Business Case Studies & Reports</h3><p>SWOT analysis, Porter's Five Forces, business model canvas, market research reports, competitor analysis and all types of business strategy assignments.</p><div class="atags"><span class="tag tg">Strategy</span><span class="tag tb">Market Research</span><span class="tag to">Reports</span></div><div class="afoot"><div><div class="ap-lbl">Starting from</div><div class="ap-val">₹699</div></div><button class="asubmit" onclick="go('contact')">Submit Now</button></div></div>
+
+        <div class="acard"><div class="acard-ico" style="background:#e8f8f8">🎨</div><h3>Design & Creative Assignments</h3><p>UI/UX design projects, graphic design assignments, brand identity projects, logo creation, poster design and all creative arts college assignments.</p><div class="atags"><span class="tag tg">UI/UX</span><span class="tag tb">Graphic</span><span class="tag tn">Branding</span></div><div class="afoot"><div><div class="ap-lbl">Starting from</div><div class="ap-val">₹499</div></div><button class="asubmit" onclick="go('contact')">Submit Now</button></div></div>
+
+        <div class="acard"><div class="acard-ico" style="background:#e8f0ff">📚</div><h3>Essay Writing & Academic Papers</h3><p>Descriptive essays, argumentative essays, reflective journals, book reviews, annotated bibliographies and all types of undergraduate academic writing.</p><div class="atags"><span class="tag tg">Essays</span><span class="tag tb">Academic</span><span class="tag to">All Formats</span></div><div class="afoot"><div><div class="ap-lbl">Starting from</div><div class="ap-val">₹449</div></div><button class="asubmit" onclick="go('contact')">Submit Now</button></div></div>
+
+        <div class="acard"><div class="acard-ico" style="background:#fff4e6">🏥</div><h3>Nursing & Healthcare Assignments</h3><p>Nursing case studies, healthcare management reports, pharmacology assignments, patient care plans and all medical & health science college projects.</p><div class="atags"><span class="tag tg">Nursing</span><span class="tag tb">Healthcare</span><span class="tag tn">Medical</span></div><div class="afoot"><div><div class="ap-lbl">Starting from</div><div class="ap-val">₹799</div></div><button class="asubmit" onclick="go('contact')">Submit Now</button></div></div>
+
+        <div class="acard"><div class="acard-ico" style="background:#ffeef0">⚖️</div><h3>Law & Legal Studies Assignments</h3><p>Legal case briefs, contract law essays, corporate law reports, constitutional law studies, moot court preparations and all LLB/LLM assignments worldwide.</p><div class="atags"><span class="tag tg">Law</span><span class="tag tb">Legal Studies</span><span class="tag to">LLB / LLM</span></div><div class="afoot"><div><div class="ap-lbl">Starting from</div><div class="ap-val">₹899</div></div><button class="asubmit" onclick="go('contact')">Submit Now</button></div></div>
       </div>
 
       <!-- Countries -->
-      <div class="countries-wrap">
+      <div class="cbox">
         <h3>🌍 Serving Students Across the World</h3>
-        <p>Our assignment experts are available 24/7 to help students from all countries, universities and time zones.</p>
-        <div class="country-pills">
-          <span class="cpill">🇮🇳 India</span>
-          <span class="cpill">🇬🇧 United Kingdom</span>
-          <span class="cpill">🇺🇸 USA</span>
-          <span class="cpill">🇦🇺 Australia</span>
-          <span class="cpill">🇨🇦 Canada</span>
-          <span class="cpill">🇦🇪 UAE</span>
-          <span class="cpill">🇸🇬 Singapore</span>
-          <span class="cpill">🇳🇿 New Zealand</span>
-          <span class="cpill">🇲🇾 Malaysia</span>
-          <span class="cpill">🇸🇦 Saudi Arabia</span>
-          <span class="cpill">🇿🇦 South Africa</span>
-          <span class="cpill">🇩🇪 Germany</span>
-          <span class="cpill">🇫🇷 France</span>
-          <span class="cpill">🇳🇱 Netherlands</span>
-          <span class="cpill">+ 30 More Countries</span>
+        <p>Our assignment experts work 24/7 across all countries, universities and time zones.</p>
+        <div class="cpills">
+          <span class="cpill">🇮🇳 India</span><span class="cpill">🇬🇧 United Kingdom</span><span class="cpill">🇺🇸 USA</span><span class="cpill">🇦🇺 Australia</span><span class="cpill">🇨🇦 Canada</span><span class="cpill">🇦🇪 UAE</span><span class="cpill">🇸🇬 Singapore</span><span class="cpill">🇳🇿 New Zealand</span><span class="cpill">🇲🇾 Malaysia</span><span class="cpill">🇸🇦 Saudi Arabia</span><span class="cpill">🇿🇦 South Africa</span><span class="cpill">🇩🇪 Germany</span><span class="cpill">🇫🇷 France</span><span class="cpill">🇳🇱 Netherlands</span><span class="cpill">+ 30 More Countries</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- How to Submit -->
-  <section style="background:var(--off-white);padding:80px 0;">
-    <div class="container text-center">
-      <div class="section-label">Simple Process</div>
-      <h2 class="section-title">How to Submit Your Assignment</h2>
-      <p class="section-sub">Get your assignment done in 4 easy steps. No hassle, no stress.</p>
-      <div class="how-grid" style="margin-top:48px">
-        <div class="how-step"><div class="how-num">1</div><h3>Share Requirements</h3><p>WhatsApp or email us your assignment details, subject, deadline and word count.</p></div>
-        <div class="how-step"><div class="how-num">2</div><h3>Get a Quote</h3><p>We'll send you a price quote within 30 minutes based on complexity and deadline.</p></div>
-        <div class="how-step"><div class="how-num">3</div><h3>Make Payment</h3><p>Pay securely via UPI, bank transfer or international payment methods.</p></div>
-        <div class="how-step"><div class="how-num">4</div><h3>Receive Work</h3><p>Get your completed assignment before the deadline, ready to submit.</p></div>
+  <section class="sec" style="background:var(--bg)">
+    <div class="wrap tc">
+      <div class="lbl">Simple Process</div>
+      <h2 class="h2">How to Submit Your Assignment</h2>
+      <p class="sub">Get your assignment done in 4 easy steps. No hassle. No stress.</p>
+      <div class="how-grid">
+        <div class="how-step"><div class="how-n">1</div><h3>Share Requirements</h3><p>WhatsApp or email us your assignment details, subject, deadline and word count.</p></div>
+        <div class="how-step"><div class="how-n">2</div><h3>Get a Quote</h3><p>We'll send you a price quote within 30 minutes based on complexity and deadline.</p></div>
+        <div class="how-step"><div class="how-n">3</div><h3>Make Payment</h3><p>Pay securely via UPI, bank transfer, card or international payment methods.</p></div>
+        <div class="how-step"><div class="how-n">4</div><h3>Receive Work</h3><p>Get your completed assignment before the deadline — ready to submit.</p></div>
       </div>
-      <div style="margin-top:40px">
-        <button class="btn btn-primary" style="font-size:17px;padding:16px 36px;" onclick="showPage('contact')">📝 Submit My Assignment Now</button>
+      <div style="margin-top:44px">
+        <button class="btn btn-g btn-lg" onclick="go('contact')">📝 Submit My Assignment Now</button>
       </div>
     </div>
   </section>
 
-</div><!-- end assignments page -->
+</div><!-- /assignments -->
 
-<!-- ============================================================
+<!-- =====================================================
      PAGE: ABOUT
-     ============================================================ -->
+     ===================================================== -->
 <div class="page" id="page-about">
 
-  <section class="about-hero">
-    <div class="container">
-      <div class="about-hero-grid">
+  <section class="ab-hero">
+    <div class="wrap">
+      <div class="ab-grid">
         <div>
-          <div class="hero-eyebrow" style="margin-bottom:20px;">Est. 2020 · Registered Pvt. Ltd.</div>
+          <div class="lbl" style="color:#4de0a0">Est. 2020 · Pvt. Ltd.</div>
           <h1>We Are <em>TechEra</em><br>Knowledge &amp; Careers</h1>
-          <p style="margin-bottom:20px;">TechEra Knowledge and Careers Pvt. Ltd. is India's fast-growing EdTech company, built to provide world-class learning and academic support to students and professionals everywhere.</p>
-          <p>Our tagline — <strong style="color:var(--green)">"Learn Here, Lead Anywhere"</strong> — is a promise. Whether you're a student in Bangalore or a professional in Toronto, TechEra helps you grow.</p>
+          <p style="margin-bottom:18px">TechEra Knowledge and Careers Pvt. Ltd. is India's fast-growing EdTech company, built to provide world-class learning and academic support to students and professionals everywhere.</p>
+          <p>Our tagline — <strong style="color:var(--g)">"Learn Here, Lead Anywhere"</strong> — is our promise. Whether you're a student in Bangalore or a professional in Toronto, TechEra is here to help you grow.</p>
         </div>
-        <div class="about-values-panel">
-          <h4>Our Core Values</h4>
-          <div class="value-row">
-            <div class="value-icon-box">🎯</div>
-            <div><h5>Excellence in Everything</h5><p>We deliver world-class quality in every workshop and every assignment.</p></div>
-          </div>
-          <div class="value-row">
-            <div class="value-icon-box">🌍</div>
-            <div><h5>Global Impact</h5><p>Serving students in 40+ countries with round-the-clock support.</p></div>
-          </div>
-          <div class="value-row">
-            <div class="value-icon-box">🤝</div>
-            <div><h5>Student Trust First</h5><p>50,000+ happy students are our biggest achievement and motivation.</p></div>
-          </div>
-          <div class="value-row">
-            <div class="value-icon-box">🚀</div>
-            <div><h5>Constant Innovation</h5><p>We evolve with the industry — always ahead, always relevant.</p></div>
-          </div>
+        <div class="val-panel">
+          <div class="lbl" style="color:rgba(255,255,255,.45);margin-bottom:18px">Our Core Values</div>
+          <div class="vrow"><div class="v-ico">🎯</div><div><h5>Excellence in Everything</h5><p>We deliver world-class quality in every workshop and every assignment, every time.</p></div></div>
+          <div class="vrow"><div class="v-ico">🌍</div><div><h5>Global Impact</h5><p>Serving students in 40+ countries with round-the-clock support and guidance.</p></div></div>
+          <div class="vrow"><div class="v-ico">🤝</div><div><h5>Student Trust First</h5><p>50,000+ happy students are our biggest achievement and our daily motivation.</p></div></div>
+          <div class="vrow"><div class="v-ico">🚀</div><div><h5>Constant Innovation</h5><p>We evolve with the industry — always ahead, always relevant, always growing.</p></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="mission-section section-pad">
-    <div class="container">
-      <div class="mission-grid">
+  <section class="sec" style="background:#fff">
+    <div class="wrap">
+      <div class="mis-grid">
         <div>
-          <div class="section-label">Our Mission</div>
-          <h2 class="section-title">Making Quality Education Accessible to All</h2>
-          <p style="font-size:16px;color:var(--gray-text);line-height:1.8;margin-bottom:20px;">TechEra was founded with a single, powerful mission: to bridge the gap between quality education and opportunity. We believe that where you are born should never determine what you can become.</p>
-          <p style="font-size:16px;color:var(--gray-text);line-height:1.8;margin-bottom:20px;">Through our paid workshops, we provide real, career-ready skills in Programming, Marketing, Creative Design and Visual Arts. Through our assignment help platform, we ensure that no student fails due to lack of guidance.</p>
-          <button class="btn btn-primary" onclick="showPage('contact')">Get in Touch →</button>
+          <div class="lbl">Our Mission</div>
+          <h2 class="h2">Making Quality Education Accessible to All</h2>
+          <p style="font-size:16px;color:var(--mt);line-height:1.8;margin-bottom:18px">TechEra was founded with a single powerful mission: to bridge the gap between quality education and opportunity. We believe that where you are born should never determine what you can become.</p>
+          <p style="font-size:16px;color:var(--mt);line-height:1.8;margin-bottom:28px">Through our paid workshops we provide real, career-ready skills. Through our assignment help platform, we ensure no student fails due to lack of guidance or time.</p>
+          <button class="btn btn-g" onclick="go('contact')">Get in Touch →</button>
         </div>
-        <div class="mission-visual">
-          <h3>TechEra By Numbers</h3>
-          <p>Our impact speaks for itself. Here's what we've achieved in just 5 years.</p>
-          <div class="mission-stat-row">
-            <div class="m-stat"><strong>50K+</strong><span>Students Trained</span></div>
-            <div class="m-stat"><strong>200+</strong><span>Workshops Done</span></div>
-            <div class="m-stat"><strong>1000+</strong><span>Projects Completed</span></div>
-            <div class="m-stat"><strong>40+</strong><span>Countries Reached</span></div>
-            <div class="m-stat"><strong>98%</strong><span>Success Rate</span></div>
-            <div class="m-stat"><strong>4.9★</strong><span>Average Rating</span></div>
+        <div class="mis-vis">
+          <h3>TechEra By the Numbers</h3>
+          <p>Our impact speaks for itself — here's what 5 years of dedication has built.</p>
+          <div class="mstats">
+            <div class="mstat"><strong>50K+</strong><span>Students Trained</span></div>
+            <div class="mstat"><strong>200+</strong><span>Workshops Done</span></div>
+            <div class="mstat"><strong>1000+</strong><span>Projects Completed</span></div>
+            <div class="mstat"><strong>40+</strong><span>Countries Reached</span></div>
+            <div class="mstat"><strong>98%</strong><span>Success Rate</span></div>
+            <div class="mstat"><strong>4.9★</strong><span>Average Rating</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="team-section section-pad">
-    <div class="container text-center">
-      <div class="section-label">Our Team</div>
-      <h2 class="section-title">The People Behind TechEra</h2>
-      <p class="section-sub">A passionate team of educators, industry experts and student success champions.</p>
+  <section class="sec" style="background:var(--bg)">
+    <div class="wrap tc">
+      <div class="lbl">Our Team</div>
+      <h2 class="h2">The People Behind TechEra</h2>
+      <p class="sub">A passionate team of educators, industry experts and student success champions.</p>
       <div class="team-grid">
-        <div class="team-card">
-          <div class="team-avatar" style="background:var(--navy)">👨‍💼</div>
-          <h4>Founder & CEO</h4>
-          <p>TechEra Knowledge and Careers Pvt. Ltd.</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar" style="background:var(--green)">👩‍🏫</div>
-          <h4>Head of Workshops</h4>
-          <p>10+ Years in EdTech & Curriculum Design</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar" style="background:var(--gold)">👨‍💻</div>
-          <h4>Tech Workshop Lead</h4>
-          <p>Full Stack Developer & Python Expert</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar" style="background:var(--red)">👩‍🎨</div>
-          <h4>Creative Design Lead</h4>
-          <p>8+ Years in Graphic & UI/UX Design</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar" style="background:#7c3aed">👨‍📊</div>
-          <h4>Marketing Workshop Lead</h4>
-          <p>Digital Marketing & Growth Expert</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar" style="background:#0891b2">👩‍💼</div>
-          <h4>Assignment Head</h4>
-          <p>Global Academic Support Specialist</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar" style="background:#059669">👨‍🎬</div>
-          <h4>Visual Arts Lead</h4>
-          <p>Filmmaker, Photographer & Video Expert</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar" style="background:#d97706">👩‍🎓</div>
-          <h4>Student Success Head</h4>
-          <p>Placement & Career Counselling Expert</p>
-        </div>
+        <div class="tmcard"><div class="tm-ava" style="background:var(--n)">👨‍💼</div><h4>Founder & CEO</h4><p>TechEra Knowledge and Careers Pvt. Ltd.</p></div>
+        <div class="tmcard"><div class="tm-ava" style="background:var(--g)">👩‍🏫</div><h4>Head of Workshops</h4><p>10+ Years in EdTech & Curriculum Design</p></div>
+        <div class="tmcard"><div class="tm-ava" style="background:var(--gold)">👨‍💻</div><h4>Tech Workshop Lead</h4><p>Full Stack Developer & Python Expert</p></div>
+        <div class="tmcard"><div class="tm-ava" style="background:var(--red)">👩‍🎨</div><h4>Creative Design Lead</h4><p>8+ Years in Graphic & UI/UX Design</p></div>
+        <div class="tmcard"><div class="tm-ava" style="background:#7c3aed">👨‍📊</div><h4>Marketing Workshop Lead</h4><p>Digital Marketing & Growth Expert</p></div>
+        <div class="tmcard"><div class="tm-ava" style="background:#0891b2">👩‍💼</div><h4>Assignment Head</h4><p>Global Academic Support Specialist</p></div>
+        <div class="tmcard"><div class="tm-ava" style="background:#059669">👨‍🎬</div><h4>Visual Arts Lead</h4><p>Filmmaker, Photographer & Video Expert</p></div>
+        <div class="tmcard"><div class="tm-ava" style="background:#d97706">👩‍🎓</div><h4>Student Success Head</h4><p>Placement & Career Counselling Expert</p></div>
       </div>
     </div>
   </section>
 
-  <section class="cta-band">
-    <div class="container">
-      <h2>Join the TechEra Family</h2>
-      <p>50,000+ students have already transformed their lives with TechEra. Your turn starts now.</p>
+  <div class="cta-band">
+    <div class="wrap">
+      <h2>Join the TechEra Family Today</h2>
+      <p>50,000+ students have already transformed their lives. Your turn starts now.</p>
       <div class="cta-btns">
-        <span class="cta-btn-white" onclick="showPage('workshops')" style="cursor:pointer">🎯 Browse Workshops</span>
-        <span class="cta-btn-outline" onclick="showPage('contact')" style="cursor:pointer">📞 Contact Us</span>
+        <span class="cta-w" onclick="go('workshops')">🎯 Browse Workshops</span>
+        <span class="cta-o" onclick="go('contact')">📞 Contact Us</span>
       </div>
     </div>
-  </section>
+  </div>
 
-</div><!-- end about page -->
+</div><!-- /about -->
 
-<!-- ============================================================
+<!-- =====================================================
      PAGE: CONTACT
-     ============================================================ -->
+     ===================================================== -->
 <div class="page" id="page-contact">
 
-  <section class="page-hero-section">
-    <div class="container">
+  <div class="ph">
+    <div class="wrap">
       <h1>📞 Contact Us</h1>
-      <p>Got a question about a workshop, need assignment help, or want to partner with us? We're here 24/7 — reach out anytime!</p>
+      <p>Got a question about a workshop or need assignment help? We reply within 2 hours — WhatsApp is fastest!</p>
     </div>
-  </section>
+  </div>
 
-  <section class="contact-section section-pad">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info-col">
+  <section class="sec" style="background:var(--bg)">
+    <div class="wrap">
+      <div class="ct-grid">
+        <div class="ci">
           <h3>Let's Talk</h3>
-          <p>Whether you need workshop guidance, assignment support, or just want to say hello — we respond within 2 hours. WhatsApp is the fastest way to reach us!</p>
-          <div class="contact-item">
-            <div class="contact-icon-box">📧</div>
-            <div><h5>Email Us</h5><p>rushab.jha@techera.org.in</p></div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon-box">💬</div>
-            <div><h5>WhatsApp (Fastest)</h5><p>+91 XXXXXXXXXX</p></div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon-box">📞</div>
-            <div><h5>Call Us</h5><p>+91 XXXXXXXXXX</p></div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon-box">🌐</div>
-            <div><h5>Website</h5><p>www.techera.org.in</p></div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon-box">⏰</div>
-            <div><h5>Support Hours</h5><p>24/7 — We never sleep!</p></div>
-          </div>
-          <div class="contact-social">
-            <div class="social-btn" title="Instagram" onclick="showToast('Opening Instagram...')">📸</div>
-            <div class="social-btn" title="LinkedIn" onclick="showToast('Opening LinkedIn...')">💼</div>
-            <div class="social-btn" title="YouTube" onclick="showToast('Opening YouTube...')">▶️</div>
-            <div class="social-btn" title="Facebook" onclick="showToast('Opening Facebook...')">👥</div>
-            <div class="social-btn" title="WhatsApp" onclick="showToast('Opening WhatsApp...')">💬</div>
+          <p>Whether you need workshop guidance, assignment support or just want to say hello — we're here 24/7. WhatsApp is the fastest way to reach us!</p>
+          <div class="citem"><div class="citem-ico">📧</div><div><h5>Email Us</h5><p>hello@techera.org.in</p></div></div>
+          <div class="citem"><div class="citem-ico">💬</div><div><h5>WhatsApp (Fastest)</h5><p>+91 XXXXXXXXXX</p></div></div>
+          <div class="citem"><div class="citem-ico">📞</div><div><h5>Call Us</h5><p>+91 XXXXXXXXXX</p></div></div>
+          <div class="citem"><div class="citem-ico">🌐</div><div><h5>Website</h5><p>www.techera.org.in</p></div></div>
+          <div class="citem"><div class="citem-ico">⏰</div><div><h5>Support Hours</h5><p>24/7 — We never sleep!</p></div></div>
+          <div class="socials">
+            <div class="soc" title="Instagram" onclick="toast('Opening Instagram...')">📸</div>
+            <div class="soc" title="LinkedIn"  onclick="toast('Opening LinkedIn...')">💼</div>
+            <div class="soc" title="YouTube"   onclick="toast('Opening YouTube...')">▶️</div>
+            <div class="soc" title="Facebook"  onclick="toast('Opening Facebook...')">👥</div>
+            <div class="soc" title="WhatsApp"  onclick="toast('Opening WhatsApp...')">💬</div>
           </div>
         </div>
-        <div class="contact-form-box">
+        <div class="cf-box">
           <h3>Send Us a Message</h3>
-          <div class="form-row">
-            <div class="form-group"><label>First Name *</label><input type="text" placeholder="Rahul"></div>
-            <div class="form-group"><label>Last Name *</label><input type="text" placeholder="Sharma"></div>
+          <div class="fr">
+            <div class="fg"><label>First Name *</label><input type="text" placeholder="Rahul"></div>
+            <div class="fg"><label>Last Name *</label><input type="text" placeholder="Sharma"></div>
           </div>
-          <div class="form-group"><label>Email Address *</label><input type="email" placeholder="you@email.com"></div>
-          <div class="form-row">
-            <div class="form-group"><label>Phone / WhatsApp</label><input type="tel" placeholder="+91 XXXXXXXXXX"></div>
-            <div class="form-group"><label>Country *</label>
+          <div class="fg"><label>Email Address *</label><input type="email" placeholder="you@email.com"></div>
+          <div class="fr">
+            <div class="fg"><label>Phone / WhatsApp</label><input type="tel" placeholder="+91 XXXXXXXXXX"></div>
+            <div class="fg"><label>Country *</label>
               <select>
                 <option value="">Select Country</option>
                 <option>India</option><option>United Kingdom</option><option>United States</option>
                 <option>Australia</option><option>Canada</option><option>UAE</option>
                 <option>Singapore</option><option>New Zealand</option><option>Malaysia</option>
                 <option>Saudi Arabia</option><option>South Africa</option><option>Germany</option>
-                <option>Other</option>
+                <option>France</option><option>Netherlands</option><option>Other</option>
               </select>
             </div>
           </div>
-          <div class="form-group"><label>I'm Interested In *</label>
+          <div class="fg"><label>I'm Interested In *</label>
             <select>
               <option value="">Select a Service</option>
               <option>Workshop — Programming</option>
@@ -1620,114 +1150,97 @@ footer { background: var(--navy); padding-top: 64px; }
               <option>General Enquiry</option>
             </select>
           </div>
-          <div class="form-group"><label>University / College (for assignments)</label><input type="text" placeholder="e.g. University of Melbourne, IIM Ahmedabad"></div>
-          <div class="form-group"><label>Message / Assignment Details *</label>
-            <textarea placeholder="Tell us what you need. For assignments: include subject, topic, word count and deadline. For workshops: mention your experience level and goals."></textarea>
+          <div class="fg"><label>University / College (for assignments)</label><input type="text" placeholder="e.g. University of Melbourne, IIM Ahmedabad"></div>
+          <div class="fg"><label>Message / Assignment Details *</label>
+            <textarea placeholder="For workshops: mention your experience level and goals.&#10;For assignments: include subject, topic, word count and deadline."></textarea>
           </div>
-          <button class="form-submit" onclick="showToast('✅ Message sent! Our team will reply within 2 hours.')">Send Message →</button>
-          <p style="font-size:13px;color:var(--gray-text);margin-top:12px;text-align:center;">⚡ Average response time: under 2 hours · 🔒 100% confidential</p>
+          <button class="fsub" onclick="toast('✅ Message sent! Our team will reply within 2 hours.')">Send Message →</button>
+          <p style="font-size:13px;color:var(--mt);margin-top:12px;text-align:center">⚡ Response within 2 hours · 🔒 100% Confidential</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="faq-strip section-pad" style="background:var(--off-white);">
-    <div class="container">
-      <div class="text-center section-label">FAQ</div>
-      <h2 class="section-title text-center">Frequently Asked Questions</h2>
-      <div class="faq-grid">
-        <div class="faq-item" onclick="toggleFaq(this)">
-          <div class="faq-q"><span>Are workshops live or recorded?</span><div class="faq-toggle">+</div></div>
-          <div class="faq-a">We offer both! Some workshops are live interactive sessions with mentors, while others are pre-recorded and available for self-paced learning. Each workshop listing clearly mentions which format it is.</div>
-        </div>
-        <div class="faq-item" onclick="toggleFaq(this)">
-          <div class="faq-q"><span>Are the assignments 100% original?</span><div class="faq-toggle">+</div></div>
-          <div class="faq-a">Yes, absolutely. Every assignment is written from scratch by our subject matter experts. We run all work through plagiarism checkers before delivery and provide a plagiarism report upon request.</div>
-        </div>
-        <div class="faq-item" onclick="toggleFaq(this)">
-          <div class="faq-q"><span>What countries do you serve for assignments?</span><div class="faq-toggle">+</div></div>
-          <div class="faq-a">We serve students across 40+ countries including India, UK, USA, Australia, Canada, UAE, Singapore, New Zealand, Malaysia, South Africa, Germany, and many more. Our team works in all time zones.</div>
-        </div>
-        <div class="faq-item" onclick="toggleFaq(this)">
-          <div class="faq-q"><span>Will I get a certificate after completing a workshop?</span><div class="faq-toggle">+</div></div>
-          <div class="faq-a">Yes! All TechEra workshops come with a verified certificate of completion issued by TechEra Knowledge and Careers Pvt. Ltd. You can add this to your LinkedIn and resume.</div>
-        </div>
-        <div class="faq-item" onclick="toggleFaq(this)">
-          <div class="faq-q"><span>How do I submit my assignment requirements?</span><div class="faq-toggle">+</div></div>
-          <div class="faq-a">Simply WhatsApp us or fill the contact form. Share your subject, topic, word count, deadline and any guidelines. We'll respond within 30 minutes with a price quote.</div>
-        </div>
-        <div class="faq-item" onclick="toggleFaq(this)">
-          <div class="faq-q"><span>Do you offer refunds for workshops?</span><div class="faq-toggle">+</div></div>
-          <div class="faq-a">Yes. If you're not satisfied within the first 24 hours of a live workshop or 7 days of a recorded course, we offer a full refund — no questions asked. Your satisfaction is our priority.</div>
-        </div>
-        <div class="faq-item" onclick="toggleFaq(this)">
-          <div class="faq-q"><span>What payment methods do you accept?</span><div class="faq-toggle">+</div></div>
-          <div class="faq-a">We accept all major payment methods: UPI (PhonePe, GPay, Paytm), Net Banking, Debit/Credit Cards, Razorpay, and international payments via PayPal and Wise for overseas students.</div>
-        </div>
-        <div class="faq-item" onclick="toggleFaq(this)">
-          <div class="faq-q"><span>Can I talk to someone before enrolling?</span><div class="faq-toggle">+</div></div>
-          <div class="faq-a">Of course! WhatsApp or call us and our counsellors will guide you to the right workshop or service for your goals. There's no pressure — we're here to help you make the best decision.</div>
-        </div>
+  <section class="sec" style="background:#fff">
+    <div class="wrap tc">
+      <div class="lbl">FAQ</div>
+      <h2 class="h2">Frequently Asked Questions</h2>
+      <div class="faq-grid" style="text-align:left">
+        <div class="faq" onclick="toggleFaq(this)"><div class="faq-q"><span>Are the workshops live or recorded?</span><div class="faq-tog">+</div></div><div class="faq-a">We offer both! Some workshops are live interactive sessions with mentors, while others are pre-recorded and available for self-paced learning. Each workshop listing clearly states its format.</div></div>
+        <div class="faq" onclick="toggleFaq(this)"><div class="faq-q"><span>Are the assignments 100% original?</span><div class="faq-tog">+</div></div><div class="faq-a">Yes, absolutely. Every assignment is written from scratch by our subject matter experts. We run all work through plagiarism checkers before delivery and provide a plagiarism report on request.</div></div>
+        <div class="faq" onclick="toggleFaq(this)"><div class="faq-q"><span>Which countries do you serve for assignments?</span><div class="faq-tog">+</div></div><div class="faq-a">We serve students in 40+ countries including India, UK, USA, Australia, Canada, UAE, Singapore, New Zealand, Malaysia, South Africa, Germany and many more. We work in all time zones.</div></div>
+        <div class="faq" onclick="toggleFaq(this)"><div class="faq-q"><span>Will I get a certificate after the workshop?</span><div class="faq-tog">+</div></div><div class="faq-a">Yes! All TechEra workshops come with a verified certificate of completion issued by TechEra Knowledge and Careers Pvt. Ltd. You can add it to your LinkedIn and resume.</div></div>
+        <div class="faq" onclick="toggleFaq(this)"><div class="faq-q"><span>How do I submit my assignment requirements?</span><div class="faq-tog">+</div></div><div class="faq-a">Simply WhatsApp us or fill the contact form. Share your subject, topic, word count, deadline and any guidelines your university provided. We respond within 30 minutes with a price quote.</div></div>
+        <div class="faq" onclick="toggleFaq(this)"><div class="faq-q"><span>Do you offer refunds for workshops?</span><div class="faq-tog">+</div></div><div class="faq-a">Yes. If you are not satisfied within 24 hours of a live workshop or 7 days of a recorded course, we offer a full refund — no questions asked. Your satisfaction is our priority.</div></div>
+        <div class="faq" onclick="toggleFaq(this)"><div class="faq-q"><span>What payment methods do you accept?</span><div class="faq-tog">+</div></div><div class="faq-a">We accept UPI (PhonePe, GPay, Paytm), Net Banking, Debit/Credit Cards, Razorpay, and international payments via PayPal and Wise for overseas students.</div></div>
+        <div class="faq" onclick="toggleFaq(this)"><div class="faq-q"><span>Can I speak to someone before enrolling?</span><div class="faq-tog">+</div></div><div class="faq-a">Of course! WhatsApp or call us and our counsellors will guide you to the right workshop or service for your goals — completely free. No pressure, just honest advice.</div></div>
       </div>
     </div>
   </section>
 
-</div><!-- end contact page -->
+</div><!-- /contact -->
 
-<!-- ============================================================
+<!-- =====================================================
      FOOTER
-     ============================================================ -->
+     ===================================================== -->
 <footer>
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand-col">
-        <div class="footer-logo-wrap">
-          <div class="footer-logo-icon">TE</div>
-          <div class="footer-brand-name">Tech<em>Era</em></div>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px">
+          <div style="width:40px;height:40px;border-radius:8px;background:var(--g);display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-weight:900;font-size:16px;color:#fff;flex-shrink:0">TE</div>
+          <div style="font-family:'Outfit',sans-serif;font-weight:800;font-size:20px;color:#fff">Tech<span style="color:var(--g)">Era</span></div>
         </div>
         <p>TechEra Knowledge and Careers Pvt. Ltd. — India's trusted EdTech platform for paid workshops and worldwide assignment help.</p>
-        <div class="footer-tagline">✨ "Learn Here, Lead Anywhere"</div>
-      </div>
-      <div class="footer-col">
-        <h5>Workshops</h5>
-        <a onclick="showPage('workshops')">Programming Workshops</a>
-        <a onclick="showPage('workshops')">Digital Marketing</a>
-        <a onclick="showPage('workshops')">Creative Design</a>
-        <a onclick="showPage('workshops')">Visual Arts</a>
-        <a onclick="showPage('workshops')">Live Workshops</a>
-        <a onclick="showPage('workshops')">Recorded Courses</a>
-      </div>
-      <div class="footer-col">
-        <h5>Assignment Help</h5>
-        <a onclick="showPage('assignments')">MBA Projects</a>
-        <a onclick="showPage('assignments')">Programming Tasks</a>
-        <a onclick="showPage('assignments')">Research Papers</a>
-        <a onclick="showPage('assignments')">Data Analysis</a>
-        <a onclick="showPage('assignments')">Essay Writing</a>
-        <a onclick="showPage('assignments')">Law Assignments</a>
-      </div>
-      <div class="footer-newsletter">
-        <h5>Stay Updated</h5>
-        <p>Subscribe for new workshop launches, offers and free learning resources.</p>
-        <div class="newsletter-form">
-          <input type="email" placeholder="Your email address">
-          <button onclick="showToast('✅ Subscribed! Check your email for updates.')">Subscribe</button>
+        <div class="ft-tagline">✨ "Learn Here, Lead Anywhere"</div>
+        <div class="ft-socs" style="margin-top:18px">
+          <div class="ft-soc" onclick="toast('Opening Instagram...')">📸</div>
+          <div class="ft-soc" onclick="toast('Opening LinkedIn...')">💼</div>
+          <div class="ft-soc" onclick="toast('Opening YouTube...')">▶️</div>
+          <div class="ft-soc" onclick="toast('Opening Facebook...')">👥</div>
+          <div class="ft-soc" onclick="toast('Opening WhatsApp...')">💬</div>
         </div>
-        <div style="display:flex;gap:10px;margin-top:16px;">
-          <div class="social-btn" onclick="showToast('Opening Instagram...')">📸</div>
-          <div class="social-btn" onclick="showToast('Opening LinkedIn...')">💼</div>
-          <div class="social-btn" onclick="showToast('Opening YouTube...')">▶️</div>
-          <div class="social-btn" onclick="showToast('Opening WhatsApp...')">💬</div>
+      </div>
+      <div class="ft-col">
+        <h5>Workshops</h5>
+        <a onclick="go('workshops')">Programming Workshops</a>
+        <a onclick="go('workshops')">Digital Marketing</a>
+        <a onclick="go('workshops')">Creative Design</a>
+        <a onclick="go('workshops')">Visual Arts</a>
+        <a onclick="go('workshops')">Live Workshops</a>
+        <a onclick="go('workshops')">Recorded Courses</a>
+      </div>
+      <div class="ft-col">
+        <h5>Assignment Help</h5>
+        <a onclick="go('assignments')">MBA Projects</a>
+        <a onclick="go('assignments')">Programming Tasks</a>
+        <a onclick="go('assignments')">Research Papers</a>
+        <a onclick="go('assignments')">Data Analysis</a>
+        <a onclick="go('assignments')">Essay Writing</a>
+        <a onclick="go('assignments')">Law Assignments</a>
+      </div>
+      <div class="ft-nl">
+        <h5>Stay Updated</h5>
+        <p>Subscribe for new workshop launches, offers and free learning tips.</p>
+        <div class="nl-form">
+          <input type="email" placeholder="Your email address">
+          <button onclick="toast('✅ Subscribed! Check your email for updates.')">Subscribe</button>
+        </div>
+        <div style="margin-top:16px">
+          <div style="font-size:13px;color:rgba(255,255,255,.5);margin-bottom:8px">Quick Links</div>
+          <a onclick="go('about')"   style="display:block;font-size:14px;color:rgba(255,255,255,.5);margin-bottom:8px;cursor:pointer;transition:color .2s" onmouseover="this.style.color='var(--g)'" onmouseout="this.style.color='rgba(255,255,255,.5)'">About Us</a>
+          <a onclick="go('contact')" style="display:block;font-size:14px;color:rgba(255,255,255,.5);margin-bottom:8px;cursor:pointer;transition:color .2s" onmouseover="this.style.color='var(--g)'" onmouseout="this.style.color='rgba(255,255,255,.5)'">Contact Us</a>
+          <a onclick="toast('Opening Careers page...')" style="display:block;font-size:14px;color:rgba(255,255,255,.5);cursor:pointer;transition:color .2s" onmouseover="this.style.color='var(--g)'" onmouseout="this.style.color='rgba(255,255,255,.5)'">Careers</a>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
+    <div class="ft-bottom">
       <span>© 2025 TechEra Knowledge and Careers Pvt. Ltd. All rights reserved. | techera.org.in</span>
-      <div class="footer-bottom-right">
-        <a onclick="showToast('Opening Privacy Policy...')">Privacy Policy</a>
-        <a onclick="showToast('Opening Terms...')">Terms of Use</a>
-        <a onclick="showToast('Opening Refund Policy...')">Refund Policy</a>
+      <div class="ft-bottom-r">
+        <a onclick="toast('Opening Privacy Policy...')">Privacy Policy</a>
+        <a onclick="toast('Opening Terms...')">Terms of Use</a>
+        <a onclick="toast('Opening Refund Policy...')">Refund Policy</a>
       </div>
     </div>
   </div>
@@ -1736,50 +1249,78 @@ footer { background: var(--navy); padding-top: 64px; }
 <!-- TOAST -->
 <div id="toast"></div>
 
-<!-- ============================================================
-     JAVASCRIPT
-     ============================================================ -->
+<!-- =====================================================
+     JAVASCRIPT — ALL INTERACTIONS
+     ===================================================== -->
 <script>
-  // Page navigation
-  function showPage(page) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-    const target = document.getElementById('page-' + page);
-    if (target) target.classList.add('active');
-    const navLink = document.getElementById('nav-' + page);
-    if (navLink) navLink.classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+// ── Page Navigation ──────────────────────────────────
+function go(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nl').forEach(l => l.classList.remove('on'));
+  var target = document.getElementById('page-' + page);
+  var navBtn = document.getElementById('nl-' + page);
+  if (target) target.classList.add('active');
+  if (navBtn) navBtn.classList.add('on');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
-  // Filter buttons
-  function filterActive(btn, group) {
-    const parent = btn.closest('.filter-bar') || btn.parentElement;
-    parent.querySelectorAll('.fb-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-  }
+// ── Mobile Menu ───────────────────────────────────────
+function toggleMenu() {
+  var ham = document.getElementById('ham');
+  var menu = document.getElementById('mobMenu');
+  ham.classList.toggle('open');
+  menu.classList.toggle('open');
+  document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+}
+function closeMenu() {
+  document.getElementById('ham').classList.remove('open');
+  document.getElementById('mobMenu').classList.remove('open');
+  document.body.style.overflow = '';
+}
 
-  // Workshop category filter
-  function filterWorkshops(cat) {
-    showPage('workshops');
-    showToast('Showing ' + cat.charAt(0).toUpperCase() + cat.slice(1) + ' workshops...');
-  }
+// ── Filter Buttons ────────────────────────────────────
+function filterBtn(btn) {
+  var bar = btn.closest('.fbar');
+  if (bar) bar.querySelectorAll('.fb').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+}
 
-  // FAQ toggle
-  function toggleFaq(item) {
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
-  }
+// ── FAQ Accordion ─────────────────────────────────────
+function toggleFaq(item) {
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq').forEach(f => f.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
 
-  // Toast notification
-  let toastTimer;
-  function showToast(msg) {
-    const t = document.getElementById('toast');
-    t.textContent = msg;
-    t.classList.add('show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => t.classList.remove('show'), 4000);
+// ── Smooth scroll to section id ───────────────────────
+function scrollToId(id) {
+  var el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ── Toast Notification ────────────────────────────────
+var _toastTimer;
+function toast(msg) {
+  var t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(_toastTimer);
+  _toastTimer = setTimeout(function() { t.classList.remove('show'); }, 4000);
+}
+
+// ── Close mobile menu on outside click ───────────────
+document.addEventListener('click', function(e) {
+  var menu = document.getElementById('mobMenu');
+  var ham = document.getElementById('ham');
+  if (menu.classList.contains('open') && !menu.contains(e.target) && !ham.contains(e.target)) {
+    closeMenu();
   }
+});
+
+// ── Keyboard: Escape closes mobile menu ──────────────
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeMenu();
+});
 </script>
 </body>
 </html>
