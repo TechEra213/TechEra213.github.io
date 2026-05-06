@@ -1060,7 +1060,14 @@ document.addEventListener('click', function(e) {
   if (menu.classList.contains('open') && !menu.contains(e.target) && !ham.contains(e.target)) {
     closeMenu();
   }
-  function toggleChat(){
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeMenu();
+});
+</script>
+</body>
+</html>
+function toggleChat(){
   chatOpen=!chatOpen;
   const cw=document.getElementById('chat-win');
   if(chatOpen){
@@ -1107,10 +1114,12 @@ function logChat(msg){
   if(!window._chatLog)window._chatLog=[];
   window._chatLog.push({msg,time:new Date().toISOString()});
 }
-});
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeMenu();
-});
+
+// SCROLL ANIMATIONS
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}});
+},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
 </script>
 </body>
 </html>
